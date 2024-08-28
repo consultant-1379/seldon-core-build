@@ -1,0 +1,75 @@
+ARG CBO_IMAGE_URL=armdocker.rnd.ericsson.se/proj-ldc/common_base_os_release/sles
+# CBO PRA version
+ARG CBO_VERSION
+FROM ${CBO_IMAGE_URL}:${CBO_VERSION} as cbo_base
+ARG CBO_VERSION
+
+############################################################################################################
+
+FROM cbo_base as build_env
+ARG ARM_URL="https://arm.sero.gic.ericsson.se/artifactory/proj-ldc-repo-rpm-local"
+ARG CBO_REPO="$ARM_URL/common_base_os/sles/$CBO_VERSION"
+ARG GO_SDK_REPO="$ARM_URL/adp-dev/go-sdk/$CBO_VERSION"
+ARG DEV_REPO="$ARM_URL/adp-dev/adp-build-env/$CBO_VERSION"
+RUN zypper addrepo --gpgcheck-strict -f $CBO_REPO COMMON_BASE_OS_SLES_REPO  \
+    && zypper addrepo --gpgcheck-strict -f $GO_SDK_REPO GO_SDK_REPO \
+    && zypper addrepo --gpgcheck-strict -f $DEV_REPO ADP_DEV_BUILD_ENV_REPO \
+    && zypper --gpg-auto-import-keys refresh -f \
+    && zypper install -l -y go1.22* gcc \
+    && zypper clean --all \
+    && zypper rr COMMON_BASE_OS_SLES_REPO GO_SDK_REPO ADP_DEV_BUILD_ENV_REPO
+
+############################################################################################################
+
+# Build the manager binary
+FROM build_env as builder
+
+WORKDIR /workspace
+COPY go.mod go.mod
+COPY go.sum go.sum
+RUN go mod download
+
+# Copy the go source
+COPY main.go main.go
+COPY apis/ apis/
+COPY controllers/ controllers/
+COPY utils/ utils/
+COPY constants/ constants/
+COPY client/ client/
+
+# Build
+RUN go build -a -o manager main.go
+
+############################################################################################################
+
+FROM cbo_base as operator_runtime
+ARG UID=8888
+ARG COMMIT
+ARG BUILD_DATE
+ARG APP_VERSION
+ARG RSTATE
+ARG IMAGE_PRODUCT_NUMBER
+ARG IMAGE_PRODUCT_TITLE
+ARG SELDON_CORE_VERSION
+
+RUN echo "$UID:!::0:::::" >>/etc/shadow \
+    && echo "$UID:x:$UID:$UID:An Identity for seldon-operator:/nonexistent:/bin/false" >>/etc/passwd
+USER $UID
+
+LABEL \
+    org.opencontainers.image.title=$IMAGE_PRODUCT_TITLE \
+    org.opencontainers.image.created=$BUILD_DATE \
+    org.opencontainers.image.revision=$COMMIT \
+    org.opencontainers.image.vendor=Ericsson \
+    org.opencontainers.image.version=$APP_VERSION \
+    com.ericsson.product-revision=$RSTATE \
+    com.ericsson.product-number=$IMAGE_PRODUCT_NUMBER \
+    com.ericsson.product-3pp-name="seldon-core" \
+    com.ericsson.product-3pp-version=${SELDON_CORE_VERSION}
+
+WORKDIR /
+COPY --chown=$UID --from=builder /workspace/manager .
+COPY --chown=$UID  stdout/stdout-redirect /opt/stdout-redirect
+ENTRYPOINT ["/manager"]
+
+############################################################################################################

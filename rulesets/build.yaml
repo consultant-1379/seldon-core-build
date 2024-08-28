@@ -1,0 +1,311 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+description: "AI/ML Model Lifecycle Manager Seldon-Core Build Tasks"
+
+# See image catalog: https://confluence.lmera.ericsson.se/display/ACD/ADP+CICD+Docker+Image+Catalog
+docker-images:
+    - adp-maven-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-java11mvnbuilder:${env.MVN_BUILDER_TAG}
+    - adp-release-auto: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-adp-release-auto:${env.RELEASE_AUTO_TAG}
+    - adp-image-dr-check: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/adp-image-dr-check:${env.IMAGE_DR_CHECK_TAG}
+    - adp-helm-dr-check: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/common-library-adp-helm-dr-check:${env.HELM_DR_CHECK_TAG}
+    - adp-go-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-gobuilder.adp-base-os:${env.GO_BUILDER_TAG}
+
+import:
+    common: common-properties.yaml
+
+properties:
+    - disabled-images-design-rules: "-DimageDesignRule.config.DR-D470203-041-A=disable -DimageDesignRule.config.DR-D470203-050-A=disable"
+    # Reports
+    - dr-checkers-report-path: build/checker-reports
+    - image-checker-report-path: ${dr-checkers-report-path}/image/
+    - seldon-core-repo-url: ssh://gerrit-gamma.gic.ericsson.se:29418/MXE/mlops-3pps/seldon-core
+    - model-lcm-repo-url: ssh://gerrit-gamma.gic.ericsson.se:29418/MXE/model-lcm
+    - model-lcm-path: .bob/model-lcm
+    - model-lcm-version: master
+    - yq-download-url: https://github.com/mikefarah/yq/releases/download/${common.yq-version}/yq_linux_amd64
+    - stdout-redirect-released-path: "/proj-adp-log-release/com/ericsson/bss/adp/log"
+
+env:
+    - DOCKER_NETWORK (default=--network host)
+    - HOME
+    - PWD
+
+    # Default docker image tags
+    - MVN_BUILDER_TAG (default=latest)
+    - RELEASE_AUTO_TAG (default=latest)
+    - IMAGE_DR_CHECK_TAG (default=latest)
+    - HELM_DR_CHECK_TAG (default=latest)
+    - GO_BUILDER_TAG (default=latest)
+
+    # Credentials
+    - SELI_ARTIFACTORY_REPO_USER
+    - SELI_ARTIFACTORY_REPO_PASS
+    - SELI_ARTIFACTORY_REPO_API_KEY
+    - GERRIT_USERNAME
+    - GERRIT_PASSWORD
+    - EMAIL (default=mxecifunc@ericsson.com)
+    - ARM_API_TOKEN
+    - SERO_ARM_TOKEN #SERO ARM KEY for CBOS Check
+    - SERO_ARM_USER (default=mxecifunc)
+
+    # Build Parameters
+    - MAVEN_OPTS (default=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn)
+    - MAVEN_CLI_OPTS (default=-Duser.home=${env.HOME} -B)
+    - DOCKER_VOLUME_MAPPING_PASSWD (default=--volume ${env.HOME}/mypasswd:/etc/passwd:ro)
+    - GERRIT_CHANGE_NUMBER
+
+    # Go
+    - GO111MODULE (default="on")
+    - CGO_ENABLED (default="on")
+    - GOOS (default="linux")
+    - GO_ARCH (default="amd64")
+    - GOPATH (default="$PWD/build/go")
+
+var:
+    - image-full-name-internal
+    - image-full-name
+    - image-base-name-internal
+    - image-base-name
+    - version
+    - commithash
+    - rstate
+    - helm-chart-repo-internal
+    - image-repopath-drop
+    - version-prefix
+    - image-repopath-internal
+    - image-dr-vm-args
+    - helm-chart-check-report-warnings
+    - cbos-version
+    - cbos-semver
+
+rules:
+    # Clean workspace
+    clean:
+        - task: rm
+          cmd:
+              - rm -rf build/
+
+    init:
+        - task: image-dr-vm-args
+          cmd: echo ${disabled-images-design-rules} > .bob/var.image-dr-vm-args
+
+    lint-license-check:
+        - task: license-check
+          docker-image: adp-release-auto
+          docker-flags:
+              - ${env.DOCKER_NETWORK}
+              - "--env MAVEN_OPTS=${env.MAVEN_OPTS}"
+              - "--env HOME=${env.HOME}"
+              - "--volume ${env.HOME}:${env.HOME}"
+          cmd: ${env.PWD}/ci/scripts/license_check.sh "${env.PWD}/.bob/bin" "${common.license-header-checker-version}" "${env.PWD}/config/license-header.txt" "bob,.bob"
+
+    clone-seldon-core:
+      - task: clone
+        cmd: ${env.PWD}/ci/scripts/clone.sh --is-seldon "true" --repoURL ${seldon-core-repo-url} --version ${common.seldon-core-release-version} --clone-to ${env.PWD}/.bob/3pp/seldon-core
+
+    download-stdout-redirect-from-arm:
+      - task: download
+        docker-image: adp-release-auto
+        docker-envs:
+          - ARM_API_TOKEN
+        cmd:
+          - mkdir -p ${env.PWD}/.bob/3pp/seldon-core/operator/stdout
+          - sh -c '
+            "${env.PWD}/ci/scripts/download_artifacts.sh"
+            --repository "${common.arm_repo_path}/${stdout-redirect-released-path}"
+            --package "stdout-redirect"
+            --version "${common.stdout-redirect-version}"
+            --target-dir "${env.PWD}/.bob/3pp/seldon-core/operator/stdout"
+            --file-name "eric-log-libstdout-redirect-golang-cxa30176-${common.stdout-redirect-version}.x86_64.tar"'
+
+    image-seldon-core-operator:
+      - task: build-seldon-operator
+        cmd:  DOCKER_BUILDKIT=1 docker build ${env.PWD}/.bob/3pp/seldon-core/operator ${env.DOCKER_NETWORK}
+                --file ${env.PWD}/images/seldon-core/Dockerfile.operator
+                --tag ${var.image-full-name-internal}-operator:${var.version}
+                --build-arg CBO_VERSION=${common.common-base-os-version}
+                --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+                --build-arg COMMIT=${var.commithash}
+                --build-arg APP_VERSION=${var.version}
+                --build-arg RSTATE=${var.rstate}
+                --build-arg IMAGE_PRODUCT_NUMBER=${common.seldon-core-operator-image-product-number}
+                --build-arg IMAGE_PRODUCT_TITLE="${common.docker-image-title} Operator"
+                --build-arg SELDON_CORE_VERSION=${common.seldon-core-release-version}
+                --progress=plain
+      - task: dr-check
+        docker-image: adp-image-dr-check
+        docker-in-docker: socket
+        cmd:
+          - image-dr-check --image ${var.image-full-name-internal}-operator:${var.version} --output ${image-checker-report-path} ${var.image-dr-vm-args}
+      - task: cbo-check
+        docker-image: adp-release-auto
+        docker-in-docker: socket
+        docker-envs:
+          - ARM_API_TOKEN
+          - SERO_ARM_TOKEN
+        docker-flags:
+          - --user root
+        cmd:
+          - cbo-check --debug --image ${var.image-full-name-internal}-operator:${var.version} --report ${image-checker-report-path}
+
+    image-seldon-core-executor:
+      - task: build-seldon-operator
+        cmd:  DOCKER_BUILDKIT=1 docker build ${env.PWD}/.bob/3pp/seldon-core/executor ${env.DOCKER_NETWORK}
+                --file ${env.PWD}/images/seldon-core/Dockerfile.executor
+                --tag ${var.image-full-name-internal}-executor:${var.version}
+                --build-arg CBO_VERSION=${common.common-base-os-version}
+                --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+                --build-arg COMMIT=${var.commithash}
+                --build-arg APP_VERSION=${var.version}
+                --build-arg RSTATE=${var.rstate}
+                --build-arg IMAGE_PRODUCT_NUMBER=${common.seldon-core-executor-image-product-number}
+                --build-arg IMAGE_PRODUCT_TITLE="${common.docker-image-title} Seldon Core Executor"
+                --build-arg SELDON_CORE_VERSION=${common.seldon-core-release-version}
+                --progress=plain
+      - task: dr-check
+        docker-image: adp-image-dr-check
+        docker-in-docker: socket
+        cmd:
+          - image-dr-check --image ${var.image-full-name-internal}-executor:${var.version} --output ${image-checker-report-path} ${var.image-dr-vm-args}
+      - task: cbo-check
+        docker-image: adp-release-auto
+        docker-in-docker: socket
+        docker-envs:
+            - ARM_API_TOKEN
+            - SERO_ARM_TOKEN
+        docker-flags:
+            - --user root
+        cmd:
+            - cbo-check --debug --image ${var.image-full-name-internal}-executor:${var.version} --report ${image-checker-report-path}
+
+    # Build a docker image pointing to dirty repository
+    image-seldon-core:
+        - rule: clone-seldon-core
+        - rule: download-stdout-redirect-from-arm
+        - rule: image-seldon-core-operator
+        - rule: image-seldon-core-executor
+        - rule: image-model-base
+
+    # Build a docker image for model base image
+    image-model-base:
+        - task: copy constraints
+          cmd: cp -p  ${env.PWD}/images/python-model-base/constraints.txt ${env.PWD}/.bob/3pp/seldon-core/operator/constraints.txt
+        - task: build
+          cmd:  DOCKER_BUILDKIT=1 docker build ${env.PWD}/.bob/3pp/seldon-core/operator
+                --file ${env.PWD}/images/python-model-base/Dockerfile
+                --tag ${var.image-base-name-internal}-python-base:${var.version}
+                --build-arg CBOS_VERSION=${common.common-base-os-version}
+                --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+                --build-arg COMMIT=${var.commithash}
+                --build-arg APP_VERSION=${var.version}
+                --build-arg RSTATE=${var.rstate}
+                --build-arg IMAGE_PRODUCT_NUMBER=${common.python-model-base-image-product-number}
+                --build-arg SELDON_CORE_VERSION=${common.seldon-core-release-version}
+                --progress=plain
+                --target model-runtime
+
+    # Push image to ci-internal repo and create local version of helm chart
+    image-push-internal:
+        - task: image-push-internal
+          cmd:
+            - docker push ${var.image-full-name-internal}-operator:${var.version}
+            - docker push ${var.image-full-name-internal}-executor:${var.version}
+            - docker push ${var.image-base-name-internal}-python-base:${var.version}
+
+    image-push:
+        - task: pull-internal
+          cmd:
+            - docker pull ${var.image-full-name-internal}-operator:${var.version}
+            - docker pull ${var.image-full-name-internal}-executor:${var.version}
+            - docker pull ${var.image-base-name-internal}-python-base:${var.version}
+        - task: tag-public
+          cmd:
+            - docker tag ${var.image-full-name-internal}-operator:${var.version} ${var.image-full-name}-operator:${var.version}
+            - docker tag ${var.image-full-name-internal}-executor:${var.version} ${var.image-full-name}-executor:${var.version}
+            - docker tag ${var.image-base-name-internal}-python-base:${var.version} ${var.image-base-name}-python-base:${var.version}
+        - task: push-public
+          cmd:
+            - docker push ${var.image-full-name}-operator:${var.version}
+            - docker push ${var.image-full-name}-executor:${var.version}
+            - docker push ${var.image-base-name}-python-base:${var.version}
+
+    # Delete docker images created
+    image-delete-internal:
+        - task: delete-internal-image
+          cmd:
+            - docker image remove ${var.image-full-name-internal}-operator:${var.version} $(docker images -f "dangling=true" -q) || true
+            - docker image remove ${var.image-full-name-internal}-executor:${var.version} $(docker images -f "dangling=true" -q) || true
+            - docker image remove ${var.image-base-name-internal}-python-base:${var.version} $(docker images -f "dangling=true" -q) || true
+    image-delete-drop:
+        - task: delete-drop-image
+          cmd:
+            - docker image remove ${common.image-full-name}-operator:${var.version} $(docker images -f "dangling=true" -q) || true
+            - docker image remove ${var.image-full-name}-executor:${var.version} $(docker images -f "dangling=true" -q) || true
+            - docker image remove ${var.image-base-name}-python-base:${var.version} $(docker images -f "dangling=true" -q) || true
+
+    # Get the latest CBOS version and update it
+    check-cbos-version:
+        - task: check-version
+          docker-image: adp-release-auto
+          docker-in-docker: socket
+          docker-envs:
+              - ARM_API_TOKEN
+              - SERO_ARM_TOKEN
+          docker-flags:
+              - --user root
+          cmd:
+              - cbo-check --image "${var.image-full-name-internal}:${var.version}" | grep "should use CBO version" | awk -F'[][]' '{print $6}' > .bob/var.cbos-version
+              - test ${var.cbos-version} != None
+    cbos-update-version:
+        - task: update-version
+          condition: check-cbos-version
+          docker-image: adp-release-auto
+          docker-in-docker: socket
+          docker-envs:
+              - GERRIT_USERNAME
+              - GERRIT_PASSWORD
+          cmd:
+              - echo "Updating CBOS version to ${var.cbos-version}"
+              - 'sed -i "s/common-base-os-version: .*/common-base-os-version: ${var.cbos-version}/" rulesets/common-properties.yaml'
+              - sed 's/\(.*\)-.*/\1/' .bob/var.cbos-version > .bob/var.cbos-semver
+              - "sed -i '/- name: Common Base OS$/{n;s/version: .*/version: ${var.cbos-semver}/}' ${common.dependency-file-name}"
+              - "sed -i '/- name: Common Base OS$/{n;s/version: .*/version: ${var.cbos-semver}/}' ${common.os-dependency-file-name}"
+              - "sed -i '/- name: Common Base OS$/{n;s/version: .*/version: ${var.cbos-semver}/}' ${common.init-dependency-file-name}"
+              - gerrit create-patch
+                --file rulesets/common-properties.yaml ${common.dependency-file-name} ${common.os-dependency-file-name} ${common.init-dependency-file-name}
+                --message "[NoJira] Update Common Base OS to ${var.cbos-version}"
+                --git-repo-local .
+                --wait-label "Verified"="+1"
+                --debug
+                --email ${env.EMAIL}
+                --submit
+
+    update-seldon-in-model-lcm:
+      - task: clone-model-lcm
+        cmd: ${env.PWD}/ci/scripts/clone.sh --repoURL "${model-lcm-repo-url}" --version "${model-lcm-version}" --clone-to "${model-lcm-path}"
+      - task: update-version
+        docker-image: adp-release-auto
+        docker-in-docker: socket
+        docker-envs:
+          - GERRIT_USERNAME
+          - GERRIT_PASSWORD
+          - EMAIL
+        cmd:
+          - ${env.PWD}/ci/scripts/download_yq.sh ${yq-download-url}
+          - ${env.PWD}/ci/scripts/create_change.sh ${model-lcm-path} ${var.image-full-name}:${var.version} ${var.image-base-name}:${var.version}

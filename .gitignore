@@ -1,0 +1,8 @@
+
+
+.bob/
+build/
+temp/
+artifact.properties
+test-output/
+?/

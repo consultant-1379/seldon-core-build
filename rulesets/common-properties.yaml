@@ -1,0 +1,73 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+properties:
+    - model-lcm-service-name: "Model Lifecycle Manager"
+    # Microservice docker image name
+    - docker-image-name: eric-aiml-model-lcm-seldon-core
+    - docker-image-base-name: eric-aiml-model-lcm
+      # Microservice docker image title
+    - docker-image-title: 'Model\ Lifecycle\ Manager\ Seldon Core'
+      # Product extended name in JIRA
+    - jira-component-name: "MEE"
+      # Gerrit repository URL
+    - gerrit-url: "https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/MXE/mlops-3pps/seldon-core-build/"
+      # GIT clone URL
+    - git-clone-url: https://gerrit-gamma.gic.ericsson.se/MXE/mlops-3pps/seldon-core-build.git
+     # Image product Numbers
+    - seldon-core-operator-image-product-number: CXU1011723
+    - seldon-core-executor-image-product-number: CXU1011724
+    - python-model-base-image-product-number: CXU1011832
+    - seldon-core-path: .bob/3pp/seldon-core
+
+      # Base OS version
+    - common-base-os-version: 6.17.0-11
+    - stdout-redirect-version: 1.38.0
+
+      # Artifact Repositories
+    - arm_repo_path: https://arm.seli.gic.ericsson.se/artifactory
+
+      # Docker Released Repo
+    - image-released-repo-name: proj-mlops-released-docker-global/proj-mlops-released
+      # Docker Repo Location
+    - image-registry-path: armdocker.rnd.ericsson.se/proj-mlops
+      # Docker Drop Repo Full Path
+    - image-drop-repopath: ${image-registry-path}-drop
+      # Docker Drop Image full name
+    - image-full-name: ${image-drop-repopath}/3pp/${docker-image-name}
+      # Docker Released Image full name
+    - image-released-repopath: ${image-registry-path}-released
+      # License Agreement JSON file name
+    - license-agreement-file-name: license-agreement.json
+      # License Agreement JSON file path
+    - license-agreement-seldon-operator-source-file-path: build/config/seldon-operator/${license-agreement-file-name}
+    - license-agreement-seldon-executor-source-file-path: build/config/seldon-executor/${license-agreement-file-name}
+    - license-agreement-seldon-python-module-source-file-path: build/config/seldon-python-module/${license-agreement-file-name}
+      # Generic repository for publishing artifacts such as documentation
+    - generic-drop-repo: ${helm-chart-repo-server-path}-drop-generic
+      # Depedencies
+    - seldon-operator-dependency-file-name: config/fossa/dependencies.seldon-operator.yaml
+    - seldon-executor-dependency-file-name: config/fossa/dependencies.seldon-executor.yaml
+    - seldon-python-module-dependency-file-name: config/fossa/dependencies.seldon-python-base.yaml
+
+    - license-header-checker-version: v1.4.0
+
+    - yq-version: v4.30.2
+
+    # Seldon core version
+    - seldon-core-release-version: v1.17.1

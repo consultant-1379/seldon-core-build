@@ -1,0 +1,98 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+ISC : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed."
+MIT : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed.
+  This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+  substantial portions of the software (in whatever format, either in binary or in source)"
+BSD-3-Clause : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+  This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+  Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+  other materials provided with the distribution"
+Apache-2.0 : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed.
+  This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+  Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+  In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+  If the software includes a NOTICE text file as part of its distribution,
+  then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+BSD-2-Clause : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+  This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+  Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+  other materials provided with the distribution"
+EPL-1.0 : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed."
+EPL-2.0 : | 
+  "Including the full license text in a prominent place with the software when the FOSS is distributed."
+CC0-1.0 : | 
+  "Ericsson should not remove any copyright notices within the software"
+WTFPL : | 
+  "Ericsson is permitted to copy and distribute verbatim or modified 
+  copies of license document, and changing it is allowed as long as the license name is changed."
+GPL-3.0-or-later : | 
+  "Ericsson must on each copy publish an appropriate copyright notice and disclaimer of warranty and keep intact all notices that refer to the GPLv3 license.
+  Ericsson must distribute a copy of the GPLv3 license along with the FOSS.
+  The files modified must carry prominent notices stating that you changed the files and the date of any change.
+  If GPLv3-FOSS is used by some program/executable that has interactive user interfaces, the program/executable must be modified so that the GPLv3 license is displayed as well.
+  Ericsson must distribute the Corresponding Source Code of the GPL-FOSS to receivers, including modifications and additions that constitute derivative work within the meaning of GPLv3. The scope of source code to be provided: all source code needed to generate, install and run the object code and to modify the work, including e.g. scripts and interface definition files. But not general-purpose tools.
+  The source code specified above must be provided to customers, mainly on either (a) a 'durable physical medium customarily used for software interchange', or (b) through access to a 'designated place', which could be network server. (b) is permitted if the object code is also provided from the same designated place or is conveyed using peer-to-peer transmission.
+  Ericsson must distribute the GPL-FOSSes and its derivative works under the GPLv3 license terms only, and not under Ericsson's standard proprietary terms. Ericsson may not impose any further restrictions on the recipient's exercise of the rights to the GPL-FOSSes.
+  Will any GPLv3 software be included on Ericsson mobile platform, so that the any GPLv3 code will end up on a mobile phone, tablet or other consumer device? If the answer is YES, then it is highly likely that the FOSS cannot be approved. The reason is that some of Ericsson's customers have explicitly forbidden ST-Ericson to use GPLv3 FOSSes in this way. The background is the so-called anti-tivoization requirements in article 6 of GPLv3, which would require customers to provide 'Installation Information'.
+  If the GPLv3 FOSS will be used in a development tool - will the way the tool function mean that the 'output' from the tool will include any GPLv3 code? If so, the output could be governed by GPLv3 as well. This is a problem if the output will end up on the mobile phone. See question 4.8 above."
+MPL-2.0 : | 
+  "You are entitled with the ability to use the software for commercial purposes.
+  You are entitled with the ability to modify the software and create derivatives.
+  You are entitled with the ability to distribute original or modified (derivative) works.
+  You are entitled with the ability to add onto the existing terms (i.e. license parent projects under a different license).
+  You are not entitled to hold liable if the software/license owner can be charged for damages.
+  The original copyright must be retained.
+  You may not use the marks of any Contributor except to pass on copyright, patent and license notices.
+  You may not remove or alter license notices in the software except to correct known factual errors.
+  You may not charge for source code form more than it costs to distribute."
+GPL-3.0-only : | 
+  "Ericsson must on each copy publish an appropriate copyright notice and disclaimer of warranty and keep intact all notices that refer to the GPLv3 license.
+  Ericsson must distribute a copy of the GPLv3 license along with the FOSS.
+  The files modified must carry prominent notices stating that you changed the files and the date of any change.
+  If GPLv3-FOSS is used by some program/executable that has interactive user interfaces, the program/executable must be modified so that the GPLv3 license is displayed as well.
+  Ericsson must distribute the Corresponding Source Code of the GPL-FOSS to receivers, including modifications and additions that constitute derivative work within the meaning of GPLv3. The scope of source code to be provided: all source code needed to generate, install and run the object code and to modify the work, including e.g. scripts and interface definition files. But not general-purpose tools.
+  The source code specified above must be provided to customers, mainly on either (a) a 'durable physical medium customarily used for software interchange', or (b) through access to a 'designated place', which could be network server. (b) is permitted if the object code is also provided from the same designated place or is conveyed using peer-to-peer transmission.
+  Ericsson must distribute the GPL-FOSSes and its derivative works under the GPLv3 license terms only, and not under Ericsson's standard proprietary terms. Ericsson may not impose any further restrictions on the recipient's exercise of the rights to the GPL-FOSSes.
+  Will any GPLv3 software be included on Ericsson mobile platform, so that the any GPLv3 code will end up on a mobile phone, tablet or other consumer device? If the answer is YES, then it is highly likely that the FOSS cannot be approved. The reason is that some of Ericsson's customers have explicitly forbidden ST-Ericson to use GPLv3 FOSSes in this way. The background is the so-called anti-tivoization requirements in article 6 of GPLv3, which would require customers to provide 'Installation Information'
+  If the GPLv3 FOSS will be used in a development tool - will the way the tool function mean that the 'output' from the tool will include any GPLv3 code? If so, the output could be governed by GPLv3 as well. This is a problem if the output will end up on the mobile phone. See question 4.8 above."
+LGPL-2.1-only : |
+  "Ericsson must include a copyright notice and warranty disclaimer on each copy, preserving all LGPL License references.
+  Distribute the LGPL license with the LGPL-FOSS.
+  Modified work must be a software library.
+  Modified files must indicate changes and modification dates.
+  Distribute complete machine-readable source code of LGPL-FOSS, including modifications and derivative works. Providpreferred source code form, interface definition files, compilation/installation scripts, and tool information.
+  Give notice with each copy of Ericsson's work using LGPL-FOSS, stating LGPL use and coverage.
+  If Ericsson's work displays copyright notices, include LGPL copyright notice and reference.
+  Accompany work using LGPL-FOSS with complete source code, including modifications.
+  Enable modification of LGPL-FOSS and relinking for modified executables.
+  Distribute LGPL-FOSS and derivative works under LGPL terms, free of charge, without further restrictions. Nproprietary terms.
+  License permits executable modification and reverse engineering for debugging.
+  If combining LGPL-FOSS with non-LGPL library, provide notice and explain finding uncombined form.
+  Modified work must be a software library.
+  Distribute LGPL-FOSS and derivative works under LGPL terms, free of charge, without additional restrictions."
+Public Domain:
+  "This is free and unencumbered software released into the public domain. To the extent possible under law, Pascal S. de Kloe has waived all copyright and related or neighboring rights to GoE. This work is published from The Netherlands.
+  Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+  In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit
+  of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law."

@@ -1,0 +1,315 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+description: "AI/ML Model Lifecycle Manager Seldon-core Foss Tasks"
+
+# See image catalog: https://confluence.lmera.ericsson.se/display/ACD/ADP+CICD+Docker+Image+Catalog
+docker-images:
+    - adp-release-auto: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-adp-release-auto:${env.RELEASE_AUTO_TAG}
+    - adp-maven-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-java11mvnbuilder:${env.MVN_BUILDER_TAG}
+    - adp-go-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-gobuilder.adp-base-os:latest
+    - adp-python-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-python3builder:latest
+
+import:
+    common: common-properties.yaml
+
+properties:
+    # FOSSA
+    - fossa-server-endpoint: https://scasfossa.internal.ericsson.com/
+    - fossa-project-name: eric-aiml-model-lcm
+    - fossa-seldon-executor-project-name: ${fossa-project-name}-seldon-executor
+    - fossa-seldon-operator-project-name: ${fossa-project-name}-seldon-operator
+    - fossa-seldon-python-module-project-name: ${fossa-project-name}-seldon-python-module
+    - fossa-seldon-executor-report-name: fossa-seldon-executor-report.json
+    - fossa-seldon-operator-report-name: fossa-seldon-operator-report.json
+    - fossa-seldon-python-module-report-name: fossa-seldon-operator-python-module-report.json
+    - fossa-team-name: aiml-mlops-mxe
+    - docker-params: "--workdir ${env.PWD}"
+    # - bazaar-svl-id: "13534"
+    - scas-product-id: "7756"
+    - scas-product-version-id: "8617"
+
+env:
+    - DOCKER_NETWORK (default=--network host)
+    - HOME
+    - PWD
+    - MAVEN_OPTS (default=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn)
+
+    # Default docker image tags
+    - MVN_BUILDER_TAG (default=latest)
+    - RELEASE_AUTO_TAG (default=latest)
+
+    # FOSSA
+    - FOSSA_ARTIFACT_HASH
+    - FOSSA_API_KEY
+
+    # BAZAAR
+    - BAZAAR_USER (default=mxecifunc)
+    - BAZAAR_TOKEN
+    - SCAS_TOKEN
+
+var:
+    - version
+    - fossa-available
+
+rules:
+    clean:
+        - task: rm
+          cmd:
+              - rm -rf *${fossa-seldon-executor-report-name} ${fossa-seldon-operator-report-name}
+
+    fossa-server-check:
+        - task: check-status
+          docker-image: adp-release-auto
+          cmd:
+              - sh -c 'if curl ${fossa-server-endpoint}; then
+                echo "FOSSA server available.";
+                echo true > .bob/var.fossa-available;
+                else
+                echo "Unable to connect to FOSSA server. Skipping FOSSA Analysis.";
+                echo false > .bob/var.fossa-available;
+                fi'
+    
+    fossa-seldon-operator-analyze:
+        - task: analyze
+          docker-image: adp-go-builder
+          docker-flags:
+              - ${docker-params}
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+              - "--env GOPATH=$PWD/build/go"
+              - "--env HOME=${env.HOME}"
+              - "--volume ${env.HOME}:${env.HOME}"
+          cmd: 
+          - cp ${env.PWD}/config/fossa/.fossa_seldon_operator.yaml ${common.seldon-core-path}/operator/.fossa.yaml
+          - sh -c 'cd ${common.seldon-core-path}/operator;fossa analyze --revision ${var.version} --team ${fossa-team-name} --endpoint ${fossa-server-endpoint} --project ${fossa-seldon-operator-project-name}' | true
+
+    fossa-seldon-executor-analyze:
+        - task: analyze
+          docker-image: adp-go-builder
+          docker-flags:
+              - ${docker-params}
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+              - "--env GOPATH=$PWD/build/go"
+              - "--env HOME=${env.HOME}"
+              - "--volume ${env.HOME}:${env.HOME}"
+          cmd: 
+            - cp ${env.PWD}/config/fossa/.fossa_seldon_executor.yaml ${common.seldon-core-path}/executor/.fossa.yaml
+            - sh -c '''
+                    set -x;
+                    cd ${common.seldon-core-path}/executor;
+                    rm -rf _operator;
+                    fossa analyze --revision ${var.version} --team ${fossa-team-name} --endpoint ${fossa-server-endpoint} --project ${fossa-seldon-executor-project-name} | true '''
+
+    fossa-seldon-python-module-analyze:
+        - task: analyze
+          docker-image: adp-python-builder
+          docker-flags:
+              - ${docker-params}
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+              - "--env HOME=${env.HOME}"
+              - "--volume ${env.HOME}:${env.HOME}"
+          cmd: 
+            - bash -c '''
+                mkdir -p ${env.PWD}/.bob/python-model-base-fossa;
+                cp ${env.PWD}/images/python-model-base/constraints.txt ${env.PWD}/.bob/python-model-base-fossa/requirements.txt;
+                cp ${env.PWD}/config/fossa/.fossa_seldon_python_module.yaml ${env.PWD}/.bob/python-model-base-fossa/.fossa.yaml;'''
+
+            - sh -c '''
+                    set -x;
+                    cd ${env.PWD}/.bob/python-model-base-fossa;
+                    fossa analyze --revision ${var.version} --team ${fossa-team-name} --endpoint ${fossa-server-endpoint} --project ${fossa-seldon-python-module-project-name} | true ;
+                    test -f /tmp/fossa-analyze-scan-summary.txt && cat /tmp/fossa-analyze-scan-summary.txt || true
+                    '''
+
+    fossa-seldon-operator-scan-status-check:
+        - task: fossa-scan-status-check
+          docker-image: adp-release-auto
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa_scan_status_check -s ${fossa-server-endpoint} -f custom -p ${fossa-seldon-operator-project-name} -r ${var.version} -t ${env.FOSSA_API_KEY} -to 3600 -dl 15
+
+    fossa-seldon-executor-scan-status-check:
+        - task: fossa-scan-status-check
+          docker-image: adp-release-auto
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa_scan_status_check -s ${fossa-server-endpoint} -f custom -p ${fossa-seldon-executor-project-name} -r ${var.version} -t ${env.FOSSA_API_KEY} -to 3600 -dl 15
+      
+    fossa-seldon-python-module-scan-status-check:
+        - task: fossa-scan-status-check
+          docker-image: adp-release-auto
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa_scan_status_check -s ${fossa-server-endpoint} -f custom -p ${fossa-seldon-python-module-project-name} -r ${var.version} -t ${env.FOSSA_API_KEY} -to 3600 -dl 15
+
+    fetch-seldon-operator-fossa-report-attribution:
+        - task: fetch-fossa-report-attribution
+          docker-image: adp-maven-builder
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa report attribution
+              --endpoint ${fossa-server-endpoint}
+              --project ${fossa-seldon-operator-project-name}
+              --revision ${var.version} --json --timeout 15000 > ${fossa-seldon-operator-report-name}
+
+    fetch-seldon-executor-fossa-report-attribution:
+        - task: fetch-fossa-report-attribution
+          docker-image: adp-maven-builder
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa report attribution
+              --endpoint ${fossa-server-endpoint}
+              --project ${fossa-seldon-executor-project-name}
+              --revision ${var.version} --json --timeout 15000 > ${fossa-seldon-executor-report-name}
+
+    fetch-seldon-python-module-fossa-report-attribution:
+        - task: fetch-fossa-report-attribution
+          docker-image: adp-maven-builder
+          docker-flags:
+              - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+          cmd: fossa report attribution
+              --endpoint ${fossa-server-endpoint}
+              --project ${fossa-seldon-python-module-project-name}
+              --revision ${var.version} --json --timeout 15000 > ${fossa-seldon-python-module-report-name}
+
+    dependency-seldon-operator-update:
+        - task: dependency-update
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-operator-report-name}
+              --dependencies ${common.seldon-operator-dependency-file-name}
+    
+    dependency-seldon-executor-update:
+        - task: dependency-update
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-executor-report-name}
+              --dependencies ${common.seldon-executor-dependency-file-name}
+
+    dependency-seldon-python-module-update:
+        - task: dependency-update
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-python-module-report-name}
+              --dependencies ${common.seldon-python-module-dependency-file-name}
+    
+    scas-seldon-operator-scan:
+        - task: scan
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-operator-report-name}
+              --dependencies ${common.seldon-operator-dependency-file-name}
+              --scan-scas
+              --scas-refresh-token ${env.SCAS_TOKEN}
+              --link-dependencies
+              --sort
+
+    scas-seldon-executor-scan:
+        - task: scan
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-executor-report-name}
+              --dependencies ${common.seldon-executor-dependency-file-name}
+              --scan-scas
+              --scas-refresh-token ${env.SCAS_TOKEN}
+              --link-dependencies
+              --sort
+
+    scas-seldon-python-module-scan:
+        - task: scan
+          docker-image: adp-release-auto
+          cmd: dependencies update
+              --fossa-report ${fossa-seldon-python-module-report-name}
+              --dependencies ${common.seldon-python-module-dependency-file-name}
+              --scan-scas
+              --scas-refresh-token ${env.SCAS_TOKEN}
+              --link-dependencies
+              --sort
+
+    # WARNING: RUN ONLY MANUALLY THIS RULE
+    bazaar-register:
+        - task: bazaar-request-for-seldon-operator
+          docker-image: adp-release-auto
+          cmd: dependencies register
+              --dependencies ${common.seldon-operator-dependency-file-name}
+              --bazaar
+              --mimer
+              --bazaar-user ${env.BAZAAR_USER}
+              --bazaar-token ${env.BAZAAR_TOKEN}
+              --bazaar-svl ${bazaar-svl-id}
+        - task: bazaar-request-for-seldon-executor
+          docker-image: adp-release-auto
+          cmd: dependencies register
+              --dependencies ${common.seldon-executor-dependency-file-name}
+              --bazaar
+              --mimer
+              --bazaar-user ${env.BAZAAR_USER}
+              --bazaar-token ${env.BAZAAR_TOKEN}
+              --bazaar-svl ${bazaar-svl-id}
+        - task: bazaar-request-for-seldon-python-module
+          docker-image: adp-release-auto
+          cmd: dependencies register
+              --dependencies ${common.seldon-python-module-dependency-file-name}
+              --bazaar
+              --mimer
+              --bazaar-user ${env.BAZAAR_USER}
+              --bazaar-token ${env.BAZAAR_TOKEN}
+              --bazaar-svl ${bazaar-svl-id}
+
+    
+    dependency-validate-seldon-operator:
+        - task: dependency-validate-seldon-operator
+          docker-image: adp-release-auto
+          cmd: dependencies validate
+              --dependencies ${common.seldon-operator-dependency-file-name}
+              --allow-esw4 || true
+
+    dependency-validate-seldon-executor:
+        - task: dependency-validate-seldon-executor
+          docker-image: adp-release-auto
+          cmd: dependencies validate
+              --dependencies ${common.seldon-executor-dependency-file-name}
+              --allow-esw4
+
+    dependency-validate-seldon-python-module:
+        - task: dependency-validate-seldon-python-module
+          docker-image: adp-release-auto
+          cmd: dependencies validate
+              --dependencies ${common.seldon-python-module-dependency-file-name}
+              --allow-esw4
+    
+    license-agreement-generate:
+        - task: license-agreement-generate-seldon-operator
+          docker-image: adp-release-auto
+          cmd: license-agreement generate
+              --dependencies ${common.seldon-operator-dependency-file-name}
+              --fossa-report ${fossa-seldon-operator-report-name}
+              --output ${common.license-agreement-seldon-operator-source-file-path}
+        - task: license-agreement-generate-seldon-executor
+          docker-image: adp-release-auto
+          cmd: license-agreement generate
+              --dependencies ${common.seldon-executor-dependency-file-name}
+              --fossa-report ${fossa-seldon-executor-report-name}
+              --output ${common.license-agreement-seldon-executor-source-file-path}
+        - task: license-agreement-generate-seldon-python-module
+          docker-image: adp-release-auto
+          cmd: license-agreement generate
+              --dependencies ${common.seldon-python-module-dependency-file-name}
+              --fossa-report ${fossa-seldon-python-module-report-name}
+              --output ${common.license-agreement-seldon-python-module-source-file-path}
+    

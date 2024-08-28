@@ -1,0 +1,361 @@
+
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+fosses:
+  - product_number: CAX1054389
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Protocol buffers are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data - think XML, but smaller, faster, and simpler. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats."
+  - product_number: CAX1054853
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Official project repository for the Setuptools build system"
+  - product_number: CAX1054904
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Jinja2 is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment."
+  - product_number: CAX1055265
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "Thrift is a software framework for scalable cross-language services development, combining a software stack with a code generation engine to build services that work efficiently and seamlessly between different languages."
+  - product_number: CAX1056382
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "PyYAML is the YAML parser and emitter for Python."
+  - product_number: CAX1056401
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Safely add untrusted strings to HTML/XML markup."
+  - product_number: CAX1056538
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "jsonschema is an implementation of JSON Schema for Python (supporting 2.7+ including Python 3)."
+  - product_number: CAX1056543
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Six is a Python 2 and 3 compatibility library.  It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions"
+  - product_number: CAX1056548
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "Requests is the only *Non-GMO* HTTP library for Python, safe for human consumption."
+  - product_number: CAX1057041
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Various helpers to pass data to untrusted environments and to get it back safe and sound.
+      This repository provides a module that is a port of the django signing module.  It's not directly copied but some changes were applied to make it work better on its own."
+  - product_number: CAX1057042
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions."
+  - product_number: CAX1057065
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Werkzeug started as simple collection of various utilities for WSGI applications
+      and has become one of the most advanced WSGI utility modules."
+  - product_number: CAX1057111
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "The fundamental package for scientific computing with Python."
+  - product_number: CAX1057288
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Python HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more."
+  - product_number: CAX1057411
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model ported from Ruby's Unicorn project."
+  - product_number: CAX1057590
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
+  - product_number: CAX1058290
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Foreign Function Interface for Python calling C code.
+      CFFI
+      ====
+
+      Foreign Function Interface for Python calling C code.
+      Please see the `Documentation <http://cffi.readthedocs.org/>`_.
+
+      Contact
+      -------
+
+      `Mailing list <https://groups.google.com/forum/#!forum/python-cffi>`_"
+  - product_number: CAX1058294
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "cryptography is a package which provides cryptographic recipes and primitives to Python developers. Our goal is for it to be your "cryptographic standard library". It supports Python 2.6 - 2.7, Python 3.3+, and PyPy 5.3+."
+  - product_number: CAX1058316
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Support for the Internationalised Domain Names in Applications (IDNA) protocol as specified in RFC 5891. This is the latest version of the protocol and is sometimes referred to as IDNA 2008.
+      This library also provides support for Unicode Technical Standard 46, Unicode IDNA Compatibility Processing.
+      This acts as a suitable replacement for the encodings.idna module that comes with the Python standard library, but which only supports the old, deprecated IDNA specification (RFC 3490)."
+  - product_number: CAX1058320
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "C parser in Python
+      pycparser is a complete parser of the C language, written in
+              pure Python using the PLY parsing library.
+              It parses C code into an AST and can serve as a front-end for
+              C compilers or analysis tools."
+  - product_number: CAX1058601
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "Python composable command line interface toolkit"
+  - product_number: CAX1059394
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "gRPC is a modern, open source, high-performance remote procedure call (RPC) framework that can run anywhere. gRPC enables client and server applications to communicate transparently, and simplifies the building of connected systems."
+  - product_number: CTX1020628
+    license: MPL-2.0
+    obligation: |
+      "You are entitled with the ability to use the software for commercial purposes.
+      You are entitled with the ability to modify the software and create derivatives.
+      You are entitled with the ability to distribute original or modified (derivative) works.
+      You are entitled with the ability to add onto the existing terms (i.e. license parent projects under a different license).
+      You are not entitled to hold liable if the software/license owner can be charged for damages.
+      The original copyright must be retained.
+      You may not use the marks of any Contributor except to pass on copyright, patent and license notices.
+      You may not remove or alter license notices in the software except to correct known factual errors.
+      You may not charge for source code form more than it costs to distribute."
+    usage: |
+      "(Python Distribution) A carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts."
+  - product_number: CTX1020696
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Classes Without Boilerplate.Its main goal is to help you to write concise and correct software without slowing down your code."
+  - product_number: CTX1022203
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "Prometheus instrumentation library for Python applications"
+  - product_number: CTX1023825
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "An MLOps framework to package, deploy, monitor and manage thousands of production machine learning models"
+  - product_number: CTX1023936
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "A Flask extension for handling Cross Origin Resource Sharing (CORS), making cross-origin AJAX possible."
+  - product_number: CTX1023943
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Pyrsistent is a number of persistent collections (by some referred to as functional data structures). Persistent in the sense that they are immutable."
+  - product_number: CTX1024029
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "This library is a Python platform API for OpenTracing."
+  - product_number: CTX1025956
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "Run Tornado Coroutines from Synchronous Python."
+  - product_number: CTX1025993
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "This is a client-side library that can be used to instrument Python apps for distributed trace collection, and to send those traces to Jaeger. See the OpenTracing Python API for additional detail."
+  - product_number: CTX1030297
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "OpenTracing instrumentation for the Flask microframework"
+  - product_number: CTX1032640
+    license: MIT
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills, The MIT copyright notice and the MIT permission notices shall be included in all copies or
+      substantial portions of the software (in whatever format, either in binary or in source)"
+    usage: |
+      "A Library that helps you read text from unknown charset encoding. This project is motivated by chardet."
+  - product_number: CTX1034461
+    license: Apache-2.0
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed.
+      This fulfills the following: Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file."
+    usage: |
+      "Package for gRPC Python."
+  - product_number: CTX1034745
+    license: BSD-3-Clause
+    obligation: |
+      "Including the full license text in a prominent place with the software when the FOSS is distributed. 
+      This fulfills the following: Redistributions of source code must retain the above copyright notice, this list of conditions and the license disclaimer.
+      Redistributions in binary form must reproduce the copyright notice, this list of conditions and the disclaimer in the documentation and/or
+      other materials provided with the distribution"
+    usage: |
+      "The `grpcio-opentracing` package makes it easy to add OpenTracing support to 
+      gRPC-based systems in Python"

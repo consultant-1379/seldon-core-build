@@ -1,0 +1,5865 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: '3.0'
+2pp_dependencies:
+- name: Common Base OS
+  version: 6.17.0
+  abc_number: APR9010622
+  evms:
+    register: 'yes'
+  category: ''
+dependencies:
+- ID: github.com/beorn7/perks+1.0.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/beorn7/perks
+      Source: git
+      Version: 1.0.1
+      Hash: 37c8de3658fcb183f997c4e13e8337516ab753e6
+      licenses:
+      - MIT
+      Title: perks
+      DownloadURL: https://github.com/beorn7/perks/archive/v1.0.1.zip
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1022328
+    community_link: https://github.com/beorn7/perks
+    community_name: https://github.com/beorn7/perks
+    community_url: https://github.com/beorn7/perks
+    component_comment: ''
+    component_highlevel_description: Perks contains the Go package quantile that computes
+      approximate quantiles over an unbounded data stream within low memory and CPU
+      bounds.
+    component_name: Perks for Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.0.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/beorn7/perks/archive/v1.0.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=919566&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/beorn7/perks
+    target_sw: linux
+    vendor: git
+    version: 1.0.1
+    web_url: https://github.com/beorn7/perks
+  licenses:
+  - MIT
+  name: perks
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.1
+  - 37c8de3658fcb183f997c4e13e8337516ab753e6
+  mimer:
+    linking: Static
+    product_number: CTX1022328
+    product_version_label: v1.0.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''919566'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''Perks for Go'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/census-instrumentation/opencensus-go+0.23.0
+  additional_info:
+    fossa-attribution:
+      Description: A stats collection and distributed tracing framework
+      Package: github.com/census-instrumentation/opencensus-go
+      Source: git
+      Version: 0.23.0
+      Hash: 49838f207d61097fc0ebb8aeef306913388376ca
+      licenses:
+      - Apache-2.0
+      Title: opencensus-go
+      DownloadURL: https://github.com/census-instrumentation/opencensus-go/archive/v0.23.0.zip
+  bazaar:
+    register: 'no'
+    prim: 13/CTX1023659
+    community_link: https://github.com/census-instrumentation/opencensus-go
+    community_name: https://github.com/census-instrumentation/opencensus-go
+    community_url: https://github.com/census-instrumentation/opencensus-go
+    component_comment: ''
+    component_highlevel_description: 'OpenCensus Go is a Go implementation of OpenCensus,
+      a toolkit for collecting application performance and behavior monitoring data.
+      Currently it consists of three major components: tags, stats and tracing.'
+    component_name: OpenCensus, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.23.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/census-instrumentation/opencensus-go/archive/refs/tags/v0.23.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=973777&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/census-instrumentation/opencensus-go
+    target_sw: linux
+    vendor: git
+    version: 0.23.0
+    web_url: https://github.com/census-instrumentation/opencensus-go
+  licenses:
+  - Apache-2.0
+  name: opencensus-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.23.0
+  - 49838f207d61097fc0ebb8aeef306913388376ca
+  mimer:
+    linking: Static
+    product_number: CTX1023659
+    product_version_label: v0.23.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''OpenCensus, Go'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''973777'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/cespare/xxhash+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: A Go implementation of the 64-bit xxHash algorithm (XXH64)
+      Package: github.com/cespare/xxhash
+      Source: git
+      Version: 2.2.0
+      Hash: a76eb16a93c1e30527c073ca831d9048b4b935f6
+      licenses:
+      - MIT
+      Title: xxhash
+      DownloadURL: https://github.com/cespare/xxhash/archive/v2.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 6/CTX1025556
+    community_link: https://github.com/cespare/xxhash
+    community_name: https://github.com/cespare/xxhash
+    community_url: https://github.com/cespare/xxhash
+    component_comment: ''
+    component_highlevel_description: A Go implementation of the 64-bit xxHash algorithm
+      (XXH64)
+    component_name: xxhash, cespare
+    component_platform: linux
+    component_programing_language: Go
+    component_version: V2.2.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/cespare/xxhash/archive/v2.2.0.zip
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1034402&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/cespare/xxhash
+    target_sw: linux
+    vendor: git
+    version: 2.2.0
+    web_url: https://github.com/cespare/xxhash
+  licenses:
+  - MIT
+  name: xxhash
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  - a76eb16a93c1e30527c073ca831d9048b4b935f6
+  mimer:
+    linking: Static
+    product_number: CTX1025556
+    product_version_label: 2.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: github.com/cloudevents/sdk-go+1.2.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/cloudevents/sdk-go
+      Source: git
+      Version: 1.2.0
+      Hash: 1f43b93ee854c847ce26d08f8433a0b0e3016c4f
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: sdk-go
+      DownloadURL: https://github.com/cloudevents/sdk-go/archive/v1.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1034900
+    community_link: https://github.com/cloudevents/sdk-go
+    community_name: https://github.com/cloudevents/sdk-go
+    community_url: https://github.com/cloudevents/sdk-go
+    component_comment: ''
+    component_highlevel_description: This is an SDK for interacting with UKFast APIs
+      from Go applications.
+    component_name: sdk-go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.2.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/cloudevents/sdk-go/archive/v1.2.0.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: This version is older than 18 months.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1027471&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/cloudevents/sdk-go
+    target_sw: linux
+    vendor: git
+    version: 1.2.0
+    web_url: https://github.com/cloudevents/sdk-go
+  licenses:
+  - MIT
+  name: sdk-go
+  primary:
+  - this
+  selected_licenses:
+  - MIT
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.2.0
+  - 1f43b93ee854c847ce26d08f8433a0b0e3016c4f
+  mimer:
+    linking: Static
+    product_number: CTX1034900
+    product_version_label: 1.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''sdk-go'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''1027471'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/confluentinc/confluent-kafka-go+1.8.2-RC1
+  additional_info:
+    fossa-attribution:
+      Description: Confluent's Apache Kafka Golang client
+      Package: github.com/confluentinc/confluent-kafka-go
+      Source: git
+      Version: 1.8.2-RC1
+      Hash: 1d5067b0f4f88f4167cb66a78ab4c4f3ec3b5786
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - ISC
+      - MIT
+      - Zlib
+      Title: confluent-kafka-go
+      DownloadURL: https://github.com/confluentinc/confluent-kafka-go/archive/v1.8.2-RC1.zip
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1029381
+    community_link: https://github.com/confluentinc/confluent-kafka-go
+    community_name: https://github.com/confluentinc/confluent-kafka-go
+    community_url: https://github.com/confluentinc/confluent-kafka-go
+    component_comment: ''
+    component_highlevel_description: confluent-kafka-go is Confluent's Golang client
+      for Apache Kafka and the Confluent Platform.
+    component_name: confluent-kafka-go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.8.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/confluentinc/confluent-kafka-go/archive/refs/tags/v1.8.2.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1009806&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/confluentinc/confluent-kafka-go
+    target_sw: linux
+    vendor: git
+    version: 1.8.2-RC1
+    web_url: https://github.com/confluentinc/confluent-kafka-go
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - ISC
+  - MIT
+  - Zlib
+  name: confluent-kafka-go
+  primary:
+  - this
+  selected_licenses:
+  - Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.8.2-RC1
+  - 1d5067b0f4f88f4167cb66a78ab4c4f3ec3b5786
+  mimer:
+    linking: Static
+    product_number: CTX1029381
+    product_version_label: v1.8.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1009806'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/davecgh/go-spew+1.1.1
+  additional_info:
+    fossa-attribution:
+      Description: Implements a deep pretty printer for Go data structures to aid
+        in debugging
+      Package: github.com/davecgh/go-spew
+      Source: git
+      Version: 1.1.1
+      Hash: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
+      licenses:
+      - ISC
+      Title: go-spew
+      DownloadURL: https://github.com/davecgh/go-spew/archive/v1.1.1.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1022334
+    community_link: https://github.com/davecgh/go-spew
+    community_name: https://github.com/davecgh/go-spew
+    community_url: https://github.com/davecgh/go-spew
+    component_comment: ''
+    component_highlevel_description: Go-spew implements a deep pretty printer for
+      Go data structures to aid in debugging. A comprehensive suite of tests with
+      100% test coverage is provided to ensure proper functionality.
+    component_name: go-spew
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.1.1
+    licenses:
+    - FAL1159116 (ISC License (ISC))
+    src_download_link: https://github.com/davecgh/go-spew/archive/v1.1.1.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=901296&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/davecgh/go-spew
+    target_sw: linux
+    vendor: git
+    version: 1.1.1
+    web_url: https://github.com/davecgh/go-spew
+  licenses:
+  - ISC
+  name: go-spew
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.1.1
+  - 8991bc29aa16c548c550c7ff78260e27b9ab7c73
+  mimer:
+    linking: Static
+    product_number: CTX1022334
+    product_version_label: v1.1.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - ISC
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/emicklei/go-restful+2.16.0
+  additional_info:
+    fossa-attribution:
+      Description: package for building REST-style Web Services using Go
+      Package: github.com/emicklei/go-restful
+      Source: git
+      Version: 2.16.0
+      Hash: ac666c045e035603f2704c98c59e979fccbfa94f
+      licenses:
+      - MIT
+      - NCSA
+      Title: go-restful
+      DownloadURL: https://github.com/emicklei/go-restful/archive/v2.16.0.zip
+  bazaar:
+    register: 'no'
+    prim: 19/CAX1058640
+    community_link: https://github.com/emicklei/go-restful
+    community_name: https://github.com/emicklei/go-restful
+    community_url: https://github.com/emicklei/go-restful
+    component_comment: ''
+    component_highlevel_description: package for building REST-style Web Services
+      using Google Go.
+    component_name: go-restful
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.11.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/emicklei/go-restful/archive/v2.11.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=925190&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: Netherlands
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/emicklei/go-restful
+    target_sw: linux
+    vendor: git
+    version: 2.16.0
+    web_url: https://github.com/emicklei/go-restful
+  licenses:
+  - MIT
+  - NCSA
+  name: go-restful
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.16.0
+  - ac666c045e035603f2704c98c59e979fccbfa94f
+  mimer:
+    linking: Static
+    product_number: CAX1058640
+    product_version_label: 2.16.0
+    selected_licenses:
+    - MIT
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/evanphx/json-patch+5.6.0
+  additional_info:
+    fossa-attribution:
+      Description: A Go library to apply RFC6902 patches and create and apply RFC7386
+        patches
+      Package: github.com/evanphx/json-patch
+      Source: git
+      Version: 5.6.0
+      Hash: 5561fe05a1ec79c9bca966376211b2ab81959671
+      licenses:
+      - BSD-3-Clause
+      Title: json-patch
+      DownloadURL: https://github.com/evanphx/json-patch/archive/v5.6.0.zip
+  bazaar:
+    register: 'no'
+    prim: 17/CTX1022061
+    community_link: https://github.com/evanphx/json-patch
+    community_name: https://github.com/evanphx/json-patch
+    community_url: https://github.com/evanphx/json-patch
+    component_comment: ''
+    component_highlevel_description: A Go library to apply RFC6902 patches and create
+      and apply RFC7386 patches.
+    component_name: JSON-Patch
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 5.6.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/evanphx/json-patch/archive/v5.6.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=989993&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/evanphx/json-patch
+    target_sw: linux
+    vendor: git
+    version: 5.6.0
+    web_url: https://github.com/evanphx/json-patch
+  licenses:
+  - BSD-3-Clause
+  name: json-patch
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 5.6.0
+  - 5561fe05a1ec79c9bca966376211b2ab81959671
+  mimer:
+    linking: Static
+    product_number: CTX1022061
+    product_version_label: v5.6.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - '''JSON-Patch'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''989993'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/fsnotify/fsnotify+1.5.1
+  additional_info:
+    fossa-attribution:
+      Description: Cross-platform file system notifications for Go.
+      Package: github.com/fsnotify/fsnotify
+      Source: git
+      Version: 1.5.1
+      Hash: 466b39d216616549a37ee93c7c47775f6a010790
+      licenses:
+      - BSD-3-Clause
+      Title: fsnotify
+      DownloadURL: https://github.com/fsnotify/fsnotify/archive/v1.5.1.zip
+  bazaar:
+    register: 'no'
+    prim: 6/CAX1059570
+    community_link: https://github.com/fsnotify/fsnotify
+    community_name: https://github.com/fsnotify/fsnotify
+    community_url: https://github.com/fsnotify/fsnotify
+    component_comment: ''
+    component_highlevel_description: Cross-platform file system notifications for
+      Go.
+    component_name: fsnotify
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.5.1
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/fsnotify/fsnotify/archive/v1.5.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=985489&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/fsnotify/fsnotify
+    target_sw: linux
+    vendor: git
+    version: 1.5.1
+    web_url: https://github.com/fsnotify/fsnotify
+  licenses:
+  - BSD-3-Clause
+  name: fsnotify
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.5.1
+  - 466b39d216616549a37ee93c7c47775f6a010790
+  mimer:
+    linking: Static
+    product_number: CAX1059570
+    product_version_label: v1.5.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/ghodss/yaml+1.0.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/ghodss/yaml
+      Source: git
+      Version: 1.0.0
+      Hash: 0ca9ea5df5451ffdf184b4428c902747c2c11cd7
+      licenses:
+      - BSD-3-Clause
+      - MIT
+      Title: yaml
+      DownloadURL: https://github.com/ghodss/yaml/archive/v1.0.0.zip
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1022107
+    community_link: http://github.com/ghodss/yaml
+    community_name: http://github.com/ghodss/yaml
+    community_url: http://github.com/ghodss/yaml
+    component_comment: ''
+    component_highlevel_description: A wrapper around go-yaml designed to enable a
+      better way of handling YAML when marshaling to and from structs.
+    component_name: yaml, Sam Ghods
+    component_platform: linux
+    component_programing_language: GO
+    component_version: 1.0.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: http://github.com/ghodss/yaml/archive/v1.0.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=905691&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: GO
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/ghodss/yaml
+    target_sw: linux
+    vendor: git
+    version: 1.0.0
+    web_url: https://github.com/ghodss/yaml
+  licenses:
+  - BSD-3-Clause
+  - MIT
+  name: yaml
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.0
+  - 0ca9ea5df5451ffdf184b4428c902747c2c11cd7
+  mimer:
+    linking: Static
+    product_number: CTX1022107
+    product_version_label: v1.0.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/go-logr/logr+1.2.3
+  additional_info:
+    fossa-attribution:
+      Description: A simple logging interface for Go
+      Package: github.com/go-logr/logr
+      Source: git
+      Version: 1.2.3
+      Hash: 47e013cee9b1f91c987cc70a218639655431b607
+      licenses:
+      - Apache-2.0
+      Title: logr
+      DownloadURL: https://github.com/go-logr/logr/archive/v1.2.3.zip
+  bazaar:
+    register: 'no'
+    prim: 10/CTX1027389
+    community_link: https://github.com/go-logr/logr
+    community_name: https://github.com/go-logr/logr
+    community_url: https://github.com/go-logr/logr
+    component_comment: ''
+    component_highlevel_description: A simple logging interface for Go
+    component_name: logr
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.2.3
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-logr/logr/archive/v1.2.3.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1005967&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/go-logr/logr
+    target_sw: linux
+    vendor: git
+    version: 1.2.3
+    web_url: https://github.com/go-logr/logr
+  licenses:
+  - Apache-2.0
+  name: logr
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.2.3
+  - 47e013cee9b1f91c987cc70a218639655431b607
+  mimer:
+    linking: Static
+    product_number: CTX1027389
+    product_version_label: v1.2.3
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW3', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/go-logr/zapr+1.2.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/go-logr/zapr
+      Source: git
+      Version: 1.2.0
+      Hash: a01e9a220589e9122aebdf3dee4b9a5abd344554
+      licenses:
+      - Apache-2.0
+      Title: zapr
+      DownloadURL: https://github.com/go-logr/zapr/archive/v1.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 6/CTX1027390
+    community_link: https://github.com/go-logr/zapr
+    community_name: https://github.com/go-logr/zapr
+    community_url: https://github.com/go-logr/zapr
+    component_comment: ''
+    component_highlevel_description: A logr implementation using Zap
+    component_name: Zapr
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-logr/zapr/archive/refs/tags/v1.2.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1002696&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/go-logr/zapr
+    target_sw: linux
+    vendor: git
+    version: 1.2.0
+    web_url: https://github.com/go-logr/zapr
+  licenses:
+  - Apache-2.0
+  name: zapr
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.2.0
+  - a01e9a220589e9122aebdf3dee4b9a5abd344554
+  mimer:
+    linking: Static
+    product_number: CTX1027390
+    product_version_label: v1.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/go-openapi/jsonpointer+0.19.5
+  additional_info:
+    fossa-attribution:
+      Description: fork of gojsonpointer with support for structs
+      Package: github.com/go-openapi/jsonpointer
+      Source: git
+      Version: 0.19.5
+      Hash: 2446e21cad36eee826e1c2380f0ff747074a2faa
+      licenses:
+      - Apache-2.0
+      Title: jsonpointer
+      DownloadURL: https://github.com/go-openapi/jsonpointer/archive/v0.19.5.zip
+  bazaar:
+    register: 'no'
+    prim: 9/CTX1021411
+    community_link: https://github.com/go-openapi/jsonpointer
+    community_name: https://github.com/go-openapi/jsonpointer
+    community_url: https://github.com/go-openapi/jsonpointer
+    component_comment: ''
+    component_highlevel_description: An implementation of JSON Pointer - Go language.
+    component_name: gojsonpointer
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.19.5
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-openapi/jsonpointer/archive/v0.19.5.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=948121&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/go-openapi/jsonpointer
+    target_sw: linux
+    vendor: git
+    version: 0.19.5
+    web_url: https://github.com/go-openapi/jsonpointer
+  licenses:
+  - Apache-2.0
+  name: jsonpointer
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.19.5
+  - 2446e21cad36eee826e1c2380f0ff747074a2faa
+  mimer:
+    linking: Static
+    product_number: CTX1021411
+    product_version_label: v0.19.5
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''gojsonpointer'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''948121'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/go-openapi/jsonreference+0.19.6
+  additional_info:
+    fossa-attribution:
+      Description: fork of gojsonreference with support for structs
+      Package: github.com/go-openapi/jsonreference
+      Source: git
+      Version: 0.19.6
+      Hash: 238d8d0fcc17b6ca1116240437a43b53d3bdf83d
+      licenses:
+      - Apache-2.0
+      Title: jsonreference
+      DownloadURL: https://github.com/go-openapi/jsonreference/archive/v0.19.6.zip
+  bazaar:
+    register: 'no'
+    prim: 12/CTX1021414
+    community_link: https://github.com/go-openapi/jsonreference
+    community_name: https://github.com/go-openapi/jsonreference
+    community_url: https://github.com/go-openapi/jsonreference
+    component_comment: ''
+    component_highlevel_description: An implementation of JSON Reference - Go language.
+    component_name: gojsonreference
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.19.6
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-openapi/jsonreference/archive/v0.19.6.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=992573&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/go-openapi/jsonreference
+    target_sw: linux
+    vendor: git
+    version: 0.19.6
+    web_url: https://github.com/go-openapi/jsonreference
+  licenses:
+  - Apache-2.0
+  name: jsonreference
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.19.6
+  - 238d8d0fcc17b6ca1116240437a43b53d3bdf83d
+  mimer:
+    linking: Static
+    product_number: CTX1021414
+    product_version_label: v0.19.6
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/go-openapi/swag+0.21.1
+  additional_info:
+    fossa-attribution:
+      Description: goodie bag in use in the go-openapi projects
+      Package: github.com/go-openapi/swag
+      Source: git
+      Version: 0.21.1
+      Hash: f55deed90c3b563ee8dd3b7f68fed3e0104fc023
+      licenses:
+      - Apache-2.0
+      Title: swag
+      DownloadURL: https://github.com/go-openapi/swag/archive/v0.21.1.zip
+  bazaar:
+    register: 'no'
+    prim: 17/CTX1022457
+    community_link: https://github.com/go-openapi/swag
+    community_name: https://github.com/go-openapi/swag
+    community_url: https://github.com/go-openapi/swag
+    component_comment: ''
+    component_highlevel_description: goodie bag in use in the go-openapi projects.
+    component_name: Swag, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.21.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-openapi/swag/archive/v0.21.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1001904&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/go-openapi/swag
+    target_sw: linux
+    vendor: git
+    version: 0.21.1
+    web_url: https://github.com/go-openapi/swag
+  licenses:
+  - Apache-2.0
+  name: swag
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.21.1
+  - f55deed90c3b563ee8dd3b7f68fed3e0104fc023
+  mimer:
+    linking: Static
+    product_number: CTX1022457
+    product_version_label: v0.21.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/gogo/protobuf+1.3.2
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/gogo/protobuf
+      Source: git
+      Version: 1.3.2
+      Hash: b03c65ea87cdc3521ede29f62fe3ce239267c1bc
+      licenses:
+      - BSD-2-Clause
+      - BSD-3-Clause
+      Title: protobuf
+      DownloadURL: https://github.com/gogo/protobuf/archive/v1.3.2.zip
+  bazaar:
+    register: 'no'
+    prim: 15/CTX1025843
+    community_link: https://github.com/gogo/protobuf
+    community_name: https://github.com/gogo/protobuf
+    community_url: https://github.com/gogo/protobuf
+    component_comment: ''
+    component_highlevel_description: Protocol Buffers for Go with Gadgets
+    component_name: Protocol Buffers for Go with Gadgets
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.3.2
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/gogo/protobuf/archive/v1.3.2.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=951117&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/gogo/protobuf
+    target_sw: linux
+    vendor: git
+    version: 1.3.2
+    web_url: https://github.com/gogo/protobuf
+  licenses:
+  - BSD-2-Clause
+  - BSD-3-Clause
+  name: protobuf
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.3.2
+  - b03c65ea87cdc3521ede29f62fe3ce239267c1bc
+  mimer:
+    linking: Static
+    product_number: CTX1025843
+    product_version_label: v1.3.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - '''951117'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''Protocol Buffers for Go with Gadgets'': Manual set stako_decision_reason: ''allowed''
+    for stako: ''ESW3'', team takes the risk!'
+- ID: github.com/golang/appengine+1.6.7
+  additional_info:
+    fossa-attribution:
+      Description: Go App Engine packages
+      Package: github.com/golang/appengine
+      Source: git
+      Version: 1.6.7
+      Hash: 5d1c1d03f8703c2e81478d9a30e9afa2d3e4bd8a
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: appengine
+      DownloadURL: https://github.com/golang/appengine/archive/v1.6.7.zip
+  bazaar:
+    register: 'no'
+    prim: 11/CTX1020362
+    community_link: https://github.com/golang/appengine
+    community_name: https://github.com/golang/appengine
+    community_url: https://github.com/golang/appengine
+    component_comment: ''
+    component_highlevel_description: This repository supports the Go runtime on App
+      Engine standard. It provides APIs for interacting with App Engine services.
+      Its canonical import path is google.golang.org/appengine.
+    component_name: Go App Engine packages
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.6.7
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/golang/appengine/archive/refs/tags/v1.6.7.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=972325&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/golang/appengine
+    target_sw: linux
+    vendor: git
+    version: 1.6.7
+    web_url: https://github.com/golang/appengine
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: appengine
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.6.7
+  - 5d1c1d03f8703c2e81478d9a30e9afa2d3e4bd8a
+  mimer:
+    linking: Static
+    product_number: CTX1020362
+    product_version_label: v1.6.7
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''Go App Engine packages'': Manual set stako_decision_reason: ''allowed'' for
+    stako: ''ESW3'', team takes the risk!'
+  - '''972325'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/golang/groupcache+41bb18bfe9da5321badc438f91158cd790a33aa3
+  additional_info:
+    fossa-attribution:
+      Description: groupcache is a caching and cache-filling library, intended as
+        a replacement for memcached in many cases.
+      Package: github.com/golang/groupcache
+      Source: git
+      Version: 41bb18bfe9da5321badc438f91158cd790a33aa3
+      Hash: 41bb18bfe9da5321badc438f91158cd790a33aa3
+      licenses:
+      - Apache-2.0
+      Title: groupcache
+      DownloadURL: https://github.com/golang/groupcache/archive/41bb18bfe9da5321badc438f91158cd790a33aa3.zip
+  bazaar:
+    register: 'no'
+    prim: 12/CTX1023678
+    community_link: https://github.com/golang/groupcache
+    community_name: https://github.com/golang/groupcache
+    community_url: https://github.com/golang/groupcache
+    component_comment: ''
+    component_highlevel_description: groupcache is a caching and cache-filling library,
+      intended as a replacement for memcached in many cases.Package groupcache provides
+      a data loading mechanism with caching and de-duplication that works across a
+      set of peer processes.
+    component_name: groupcache
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 41BB18B
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/golang/groupcache/archive/41bb18bfe9da5321badc438f91158cd790a33aa3.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: No frequent releases.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=967992&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/golang/groupcache
+    target_sw: linux
+    vendor: git
+    version: 41bb18bfe9da5321badc438f91158cd790a33aa3
+    web_url: https://github.com/golang/groupcache
+  licenses:
+  - Apache-2.0
+  name: groupcache
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 41bb18bfe9da5321badc438f91158cd790a33aa3
+  - 41bb18bfe9da5321badc438f91158cd790a33aa3
+  mimer:
+    linking: Static
+    product_number: CTX1023678
+    product_version_label: 41bb18bfe9da5321badc438f91158cd790a33aa3
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''groupcache'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''967992'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/golang/protobuf+1.5.2
+  additional_info:
+    fossa-attribution:
+      Description: Go support for Google's protocol buffers
+      Package: github.com/golang/protobuf
+      Source: git
+      Version: 1.5.2
+      Hash: ae97035608a719c7a1c1c41bed0ae0744bdb0c6f
+      licenses:
+      - BSD-3-Clause
+      Title: protobuf
+      DownloadURL: https://github.com/golang/protobuf/archive/v1.5.2.zip
+  bazaar:
+    register: 'no'
+    prim: 43/CAX1059823
+    community_link: https://github.com/golang/protobuf
+    community_name: https://github.com/golang/protobuf
+    community_url: https://github.com/golang/protobuf
+    component_comment: ''
+    component_highlevel_description: Go support for Google's protocol buffers
+    component_name: protobuf, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.5.2
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/protobuf/archive/refs/tags/v1.5.2.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=967744&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/golang/protobuf
+    target_sw: linux
+    vendor: git
+    version: 1.5.2
+    web_url: http://github.com/golang/protobuf
+  licenses:
+  - BSD-3-Clause
+  name: protobuf
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.5.2
+  - ae97035608a719c7a1c1c41bed0ae0744bdb0c6f
+  mimer:
+    linking: Static
+    product_number: CAX1059823
+    product_version_label: v1.5.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/gomodules/jsonpatch+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: Generate JSON Patch as specified in RFC 6902 from the IETF
+      Package: github.com/gomodules/jsonpatch
+      Source: git
+      Version: 2.2.0
+      Hash: 93a4dafa4292a7e6cfff7d5d9aefc0f48219f07d
+      licenses:
+      - Apache-2.0
+      Title: jsonpatch
+      DownloadURL: https://github.com/gomodules/jsonpatch/archive/v2.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1028635
+    community_link: https://github.com/gomodules/jsonpatch
+    community_name: https://github.com/gomodules/jsonpatch
+    community_url: https://github.com/gomodules/jsonpatch
+    component_comment: ''
+    component_highlevel_description: JSON Patch allows you to generate JSON that describes
+      changes you want to make to a document, so you don't have to send the whole
+      doc. JSON Patch format is supported by HTTP PATCH method, allowing for standards
+      based partial updates via REST APIs.
+    component_name: jsonpatch, gomodules
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/gomodules/jsonpatch/archive/refs/tags/v2.2.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=983788&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/gomodules/jsonpatch
+    target_sw: linux
+    vendor: git
+    version: 2.2.0
+    web_url: https://github.com/gomodules/jsonpatch
+  licenses:
+  - Apache-2.0
+  name: jsonpatch
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  - 93a4dafa4292a7e6cfff7d5d9aefc0f48219f07d
+  mimer:
+    linking: Static
+    product_number: CTX1028635
+    product_version_label: v2.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''983788'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''jsonpatch, gomodules'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+- ID: github.com/google/gnostic+0.5.7-v3refs
+  additional_info:
+    fossa-attribution:
+      Description: A compiler for APIs described by the OpenAPI Specification with
+        plugins for code generation and other API support tasks.
+      Package: github.com/google/gnostic
+      Source: git
+      Version: 0.5.7-v3refs
+      Hash: b49832d97d25b6a41cbe34ea12257924a934eeee
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - MIT
+      Title: gnostic
+      DownloadURL: https://github.com/google/gnostic/archive/v0.5.7-v3refs.zip
+  bazaar:
+    register: 'no'
+    prim: 19/CTX1021678
+    community_link: https://github.com/google/gnostic
+    community_name: https://github.com/google/gnostic
+    community_url: https://github.com/google/gnostic
+    component_comment: ''
+    component_highlevel_description: A compiler for API descriptions in OpenAPI and
+      Google's API Discovery Format with plugins for code generation and other API
+      support tasks.
+    component_name: gnostic
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.5.7-V3REFS
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/google/gnostic/archive/refs/tags/v0.5.7-v3refs.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1014576&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/google/gnostic
+    target_sw: linux
+    vendor: git
+    version: 0.5.7-v3refs
+    web_url: https://github.com/google/gnostic
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - MIT
+  name: gnostic
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.5.7-v3refs
+  - b49832d97d25b6a41cbe34ea12257924a934eeee
+  mimer:
+    linking: Static
+    product_number: CTX1021678
+    product_version_label: v0.5.7-v3refs
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW3', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/google/go-cmp+0.5.9
+  additional_info:
+    fossa-attribution:
+      Description: Package for comparing Go values in tests
+      Package: github.com/google/go-cmp
+      Source: git
+      Version: 0.5.9
+      Hash: a97318bf6562f2ed2632c5f985db51b1bc5bdcd0
+      licenses:
+      - BSD-3-Clause
+      Title: go-cmp
+      DownloadURL: https://github.com/google/go-cmp/archive/v0.5.9.zip
+  bazaar:
+    register: 'no'
+    prim: 14/CTX1025273
+    community_link: https://github.com/google/go-cmp
+    community_name: https://github.com/google/go-cmp
+    community_url: https://github.com/google/go-cmp
+    component_comment: ''
+    component_highlevel_description: Package for comparing Go values in tests
+    component_name: go-cmp
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.5.9
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/google/go-cmp/archive/refs/tags/v0.5.9.zip
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1025185&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/google/go-cmp
+    target_sw: linux
+    vendor: git
+    version: 0.5.9
+    web_url: https://github.com/google/go-cmp
+  licenses:
+  - BSD-3-Clause
+  name: go-cmp
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.5.9
+  - a97318bf6562f2ed2632c5f985db51b1bc5bdcd0
+  mimer:
+    linking: Static
+    product_number: CTX1025273
+    product_version_label: 0.5.9
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: github.com/google/gofuzz+1.2.0
+  additional_info:
+    fossa-attribution:
+      Description: Fuzz testing for go.
+      Package: github.com/google/gofuzz
+      Source: git
+      Version: 1.2.0
+      Hash: 379e164120fbc98885a8f494b5aa41ba94f64c56
+      licenses:
+      - Apache-2.0
+      Title: gofuzz
+      DownloadURL: https://github.com/google/gofuzz/archive/v1.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 4/CTX1021787
+    community_link: https://github.com/google/gofuzz
+    community_name: https://github.com/google/gofuzz
+    community_url: https://github.com/google/gofuzz
+    component_comment: ''
+    component_highlevel_description: gofuzz is a library for populating go objects
+      with random values.
+    component_name: gofuzz
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/google/gofuzz/archive/v1.2.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=954060&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/google/gofuzz
+    target_sw: linux
+    vendor: git
+    version: 1.2.0
+    web_url: https://github.com/google/gofuzz
+  licenses:
+  - Apache-2.0
+  name: gofuzz
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.2.0
+  - 379e164120fbc98885a8f494b5aa41ba94f64c56
+  mimer:
+    linking: Static
+    product_number: CTX1021787
+    product_version_label: v1.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''gofuzz'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''954060'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/google/uuid+1.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/google/uuid
+      Source: git
+      Version: 1.3.0
+      Hash: 44b5fee7c49cf3bcdf723f106b36d56ef13ccc88
+      licenses:
+      - BSD-3-Clause
+      Title: uuid
+      DownloadURL: https://github.com/google/uuid/archive/v1.3.0.zip
+  bazaar:
+    register: 'no'
+    prim: 9/CTX1025800
+    community_link: https://github.com/google/uuid
+    community_name: https://github.com/google/uuid
+    community_url: https://github.com/google/uuid
+    component_comment: ''
+    component_highlevel_description: 'The uuid package generates and inspects UUIDs
+      based on RFC 4122 and DCE 1.1: Authentication and Security Services.'
+    component_name: uuid,  Google
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.3.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/google/uuid/archive/v1.3.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=990059&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/google/uuid
+    target_sw: linux
+    vendor: git
+    version: 1.3.0
+    web_url: https://github.com/google/uuid
+  licenses:
+  - BSD-3-Clause
+  name: uuid
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.3.0
+  - 44b5fee7c49cf3bcdf723f106b36d56ef13ccc88
+  mimer:
+    linking: Static
+    product_number: CTX1025800
+    product_version_label: v1.3.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - '''uuid,  Google'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''990059'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/googleapis/go-genproto+76db0878b65f00c3f93403b4b9a155af313cc4ba
+  additional_info:
+    fossa-attribution:
+      Description: Generated code for Google Cloud client libraries.
+      Package: github.com/googleapis/go-genproto
+      Source: git
+      Version: 76db0878b65f00c3f93403b4b9a155af313cc4ba
+      Hash: 76db0878b65f00c3f93403b4b9a155af313cc4ba
+      licenses:
+      - Apache-2.0
+      - IPA
+      - LGPL-2.1-only
+      - MIT
+      Title: go-genproto
+      DownloadURL: https://github.com/googleapis/go-genproto/archive/76db0878b65f00c3f93403b4b9a155af313cc4ba.zip
+  bazaar:
+    register: 'no'
+    prim: 55/CTX1028078
+    community_link: https://github.com/googleapis/go-genproto
+    community_name: https://github.com/googleapis/go-genproto
+    community_url: https://github.com/googleapis/go-genproto
+    component_comment: ''
+    component_highlevel_description: Contains the generated Go packages for common
+      protocol buffer types, and the generated [gRPC][1] code necessary for interacting
+      with Google's gRPC APIs.
+    component_name: go-genproto
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 76DB087
+    licenses: []
+    src_download_link: https://github.com/googleapis/go-genproto/archive/76db0878b65f00c3f93403b4b9a155af313cc4ba.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Low community activity
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1059612&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/googleapis/go-genproto
+    target_sw: linux
+    vendor: git
+    version: 76db0878b65f00c3f93403b4b9a155af313cc4ba
+    web_url: https://github.com/googleapis/go-genproto
+  licenses:
+  - Apache-2.0
+  - IPA
+  - LGPL-2.1-only
+  - MIT
+  name: go-genproto
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 76db0878b65f00c3f93403b4b9a155af313cc4ba
+  - 76db0878b65f00c3f93403b4b9a155af313cc4ba
+  mimer:
+    linking: Static
+    product_number: CTX1028078
+    product_version_label: 76db0878b65f00c3f93403b4b9a155af313cc4ba
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/gorilla/mux+1.8.0
+  additional_info:
+    fossa-attribution:
+      Description: "A powerful HTTP router and URL matcher for building Go web servers
+        with \U0001F98D"
+      Package: github.com/gorilla/mux
+      Source: git
+      Version: 1.8.0
+      Hash: 98cb6bf42e086f6af920b965c38cacc07402d51b
+      licenses:
+      - BSD-3-Clause
+      Title: mux
+      DownloadURL: https://github.com/gorilla/mux/archive/v1.8.0.zip
+  bazaar:
+    register: 'no'
+    prim: 13/CAX1059027
+    community_link: https://github.com/gorilla/mux/
+    community_name: https://github.com/gorilla/mux/
+    community_url: https://github.com/gorilla/mux/
+    component_comment: ''
+    component_highlevel_description: A powerful HTTP router and URL matcher for building
+      Go web servers with ????
+    component_name: Mux
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.8.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/gorilla/mux/archive/v1.8.0.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=947014&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/gorilla/mux
+    target_sw: linux
+    vendor: git
+    version: 1.8.0
+    web_url: https://github.com/gorilla/mux
+  licenses:
+  - BSD-3-Clause
+  name: mux
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.8.0
+  - 98cb6bf42e086f6af920b965c38cacc07402d51b
+  mimer:
+    linking: Static
+    product_number: CAX1059027
+    product_version_label: v1.8.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - '''Mux'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'', team
+    takes the risk!'
+  - '''947014'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/gotestyourself/gotest.tools+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: A collection of packages to augment the go testing package and
+        support common patterns.
+      Package: github.com/gotestyourself/gotest.tools
+      Source: git
+      Version: 2.2.0
+      Hash: 7c797b5133e5460410dbb22ba779bf35e6975dea
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: gotest.tools
+      DownloadURL: https://github.com/gotestyourself/gotest.tools/archive/v2.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1026254
+    community_link: https://gotest.tools
+    community_name: https://gotest.tools
+    community_url: https://gotest.tools
+    component_comment: ''
+    component_highlevel_description: A collection of packages to augment testing and
+      support common patterns.
+    component_name: gotest.tools
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/gotestyourself/gotestyourself/archive/v2.2.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=916133&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/gotestyourself/gotest.tools
+    target_sw: linux
+    vendor: git
+    version: 2.2.0
+    web_url: https://github.com/gotestyourself/gotest.tools
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: gotest.tools
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  - 7c797b5133e5460410dbb22ba779bf35e6975dea
+  mimer:
+    linking: Static
+    product_number: CTX1026254
+    product_version_label: v2.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/grpc-ecosystem/go-grpc-middleware+1.3.0
+  additional_info:
+    fossa-attribution:
+      Description: 'Golang gRPC Middlewares: interceptor chaining, auth, logging,
+        retries and more.'
+      Package: github.com/grpc-ecosystem/go-grpc-middleware
+      Source: git
+      Version: 1.3.0
+      Hash: df0f91b29bbbdfc3a686a7a8edbe2b9de2072fdd
+      licenses:
+      - Apache-2.0
+      Title: go-grpc-middleware
+      DownloadURL: https://github.com/grpc-ecosystem/go-grpc-middleware/archive/v1.3.0.zip
+  bazaar:
+    register: 'no'
+    prim: 7/CTX1025798
+    community_link: https://github.com/grpc-ecosystem/go-grpc-middleware
+    community_name: https://github.com/grpc-ecosystem/go-grpc-middleware
+    community_url: https://github.com/grpc-ecosystem/go-grpc-middleware
+    component_comment: ''
+    component_highlevel_description: 'Golang gRPC Middlewares: interceptor chaining,
+      auth, logging, retries and more.'
+    component_name: Go gRPC Middleware
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.3.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/grpc-ecosystem/go-grpc-middleware/archive/v1.3.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=970739&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United Kingdom
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/grpc-ecosystem/go-grpc-middleware
+    target_sw: linux
+    vendor: git
+    version: 1.3.0
+    web_url: https://github.com/grpc-ecosystem/go-grpc-middleware
+  licenses:
+  - Apache-2.0
+  name: go-grpc-middleware
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.3.0
+  - df0f91b29bbbdfc3a686a7a8edbe2b9de2072fdd
+  mimer:
+    linking: Static
+    product_number: CTX1025798
+    product_version_label: v1.3.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''Go gRPC Middleware'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''970739'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/grpc/grpc-go+1.53.0
+  additional_info:
+    fossa-attribution:
+      Description: The Go language implementation of gRPC. HTTP/2 based RPC
+      Package: github.com/grpc/grpc-go
+      Source: git
+      Version: 1.53.0
+      Hash: dba26e15a07f43875ccf806a2dd6cbcbc1c12eab
+      licenses:
+      - Apache-2.0
+      Title: grpc-go
+      DownloadURL: https://github.com/grpc/grpc-go/archive/v1.53.0.zip
+  bazaar:
+    register: 'no'
+    prim: 72/CTX1020424
+    community_link: https://github.com/grpc/grpc-go
+    community_name: https://github.com/grpc/grpc-go
+    community_url: https://github.com/grpc/grpc-go
+    component_comment: ''
+    component_highlevel_description: The Go language implementation of gRPC. HTTP-2
+      based RPC.
+    component_name: gRPC-Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: V1.53.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/grpc/grpc-go/archive/v1.53.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1041408&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/grpc/grpc-go
+    target_sw: linux
+    vendor: git
+    version: 1.53.0
+    web_url: https://github.com/grpc/grpc-go
+  licenses:
+  - Apache-2.0
+  name: grpc-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.53.0
+  - dba26e15a07f43875ccf806a2dd6cbcbc1c12eab
+  mimer:
+    linking: Static
+    product_number: CTX1020424
+    product_version_label: 1.53.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1041408'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/HdrHistogram/hdrhistogram-go+1.1.2
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/HdrHistogram/hdrhistogram-go
+      Source: git
+      Version: 1.1.2
+      Hash: 494271c4c016b36c8cee88480288f33b419cf7b0
+      licenses:
+      - MIT
+      Title: hdrhistogram-go
+      DownloadURL: https://github.com/HdrHistogram/hdrhistogram-go/archive/v1.1.2.zip
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1025501
+    community_link: https://github.com/HdrHistogram/hdrhistogram-go
+    community_name: https://github.com/HdrHistogram/hdrhistogram-go
+    community_url: https://github.com/HdrHistogram/hdrhistogram-go
+    component_comment: ''
+    component_highlevel_description: A pure Go implementation of Gil Tene's HDR Histogram.
+    component_name: hdrhistogram, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.1.2
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/HdrHistogram/hdrhistogram-go/archive/refs/tags/v1.1.2.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1003984&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/HdrHistogram/hdrhistogram-go
+    target_sw: linux
+    vendor: git
+    version: 1.1.2
+    web_url: https://github.com/HdrHistogram/hdrhistogram-go
+  licenses:
+  - MIT
+  name: hdrhistogram-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.1.2
+  - 494271c4c016b36c8cee88480288f33b419cf7b0
+  mimer:
+    linking: Static
+    product_number: CTX1025501
+    product_version_label: v1.1.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''hdrhistogram, Go'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''1003984'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/imdario/mergo+0.3.12
+  additional_info:
+    fossa-attribution:
+      Description: 'Mergo: merging Go structs and maps since 2013.'
+      Package: github.com/imdario/mergo
+      Source: git
+      Version: 0.3.12
+      Hash: 29fb3d3bdc5512887f1dc9aedde6a0fed407fa8f
+      licenses:
+      - BSD-3-Clause
+      Title: mergo
+      DownloadURL: https://github.com/imdario/mergo/archive/0.3.12.zip
+  bazaar:
+    register: 'no'
+    prim: 11/CTX1023616
+    community_link: https://github.com/imdario/mergo
+    community_name: https://github.com/imdario/mergo
+    community_url: https://github.com/imdario/mergo
+    component_comment: ''
+    component_highlevel_description: A helper to merge structs and maps in Golang.
+      Useful for configuration default values, avoiding messy if-statements.
+    component_name: Mergo
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.3.12
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/imdario/mergo/archive/refs/tags/v0.3.12.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=967997&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: Spain
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/imdario/mergo
+    target_sw: linux
+    vendor: git
+    version: 0.3.12
+    web_url: https://github.com/imdario/mergo
+  licenses:
+  - BSD-3-Clause
+  name: mergo
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.3.12
+  - 29fb3d3bdc5512887f1dc9aedde6a0fed407fa8f
+  mimer:
+    linking: Static
+    product_number: CTX1023616
+    product_version_label: v0.3.12
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/josharian/intern+42b52b674af5a7cef9ce7e197bc21c78394ae65d
+  additional_info:
+    fossa-attribution:
+      Description: Intern Go strings
+      Package: github.com/josharian/intern
+      Source: git
+      Version: 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+      Hash: 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+      licenses:
+      - MIT
+      Title: intern
+      DownloadURL: https://github.com/josharian/intern/archive/42b52b674af5a7cef9ce7e197bc21c78394ae65d.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1030307
+    community_link: https://github.com/josharian/intern
+    community_name: https://github.com/josharian/intern
+    community_url: https://github.com/josharian/intern
+    component_comment: ''
+    component_highlevel_description: Intern Go strings
+    component_name: intern, josharian
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 42B52B6
+    licenses: []
+    src_download_link: https://github.com/josharian/intern/archive/42b52b674af5a7cef9ce7e197bc21c78394ae65d.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Inactive community
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1045715&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/josharian/intern
+    target_sw: linux
+    vendor: git
+    version: 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+    web_url: https://github.com/josharian/intern
+  licenses:
+  - MIT
+  name: intern
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+  - 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+  mimer:
+    linking: Static
+    product_number: CTX1030307
+    product_version_label: 42b52b674af5a7cef9ce7e197bc21c78394ae65d
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/json-iterator/go+1.1.12
+  additional_info:
+    fossa-attribution:
+      Description: A high-performance 100% compatible drop-in replacement of "encoding/json"
+      Package: github.com/json-iterator/go
+      Source: git
+      Version: 1.1.12
+      Hash: 024077e996b048517130b21ea6bf12aa23055d3d
+      licenses:
+      - MIT
+      Title: json-iterator
+      DownloadURL: https://github.com/json-iterator/go/archive/v1.1.12.zip
+  bazaar:
+    register: 'no'
+    prim: 14/CTX1023633
+    community_link: https://github.com/json-iterator/go
+    community_name: https://github.com/json-iterator/go
+    community_url: https://github.com/json-iterator/go
+    component_comment: ''
+    component_highlevel_description: A high-performance 100% compatible drop-in replacement
+      of "encoding/json"
+    component_name: go, json-iterator
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.1.12
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/json-iterator/go/archive/v1.1.12.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=990359&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: China
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/json-iterator/go
+    target_sw: linux
+    vendor: git
+    version: 1.1.12
+    web_url: https://github.com/json-iterator/go
+  licenses:
+  - MIT
+  name: json-iterator
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.1.12
+  - 024077e996b048517130b21ea6bf12aa23055d3d
+  mimer:
+    linking: Static
+    product_number: CTX1023633
+    product_version_label: v1.1.12
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''go, json-iterator'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''990359'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kedacore/keda+2.7.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/kedacore/keda
+      Source: git
+      Version: 2.7.1
+      Hash: dcb9c1e2d157ba3a763acfdfba60d819874d2c16
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: keda
+      DownloadURL: https://github.com/kedacore/keda/archive/v2.7.1.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1036615
+    community_link: https://github.com/kedacore/keda
+    community_name: https://github.com/kedacore/keda
+    community_url: https://github.com/kedacore/keda
+    component_comment: ''
+    component_highlevel_description: KEDA is a Kubernetes-based Event Driven Autoscaling
+      component. It provides event driven scale for any container running in Kubernetes
+    component_name: KEDA
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.7.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kedacore/keda/archive/v2.7.1.zip
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1027492&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Czech Republic
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kedacore/keda
+    target_sw: linux
+    vendor: git
+    version: 2.7.1
+    web_url: https://github.com/kedacore/keda
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: keda
+  primary:
+  - this
+  selected_licenses:
+  - Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.7.1
+  - dcb9c1e2d157ba3a763acfdfba60d819874d2c16
+  mimer:
+    linking: Static
+    product_number: CTX1036615
+    product_version_label: 2.7.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+- ID: github.com/knative/pkg+4fced0164c9a2ba173271a273662aa3e015d8073
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/knative/pkg
+      Source: git
+      Version: 4fced0164c9a2ba173271a273662aa3e015d8073
+      Hash: 4fced0164c9a2ba173271a273662aa3e015d8073
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - MIT
+      Title: pkg
+      DownloadURL: https://github.com/knative/pkg/archive/4fced0164c9a2ba173271a273662aa3e015d8073.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1036619
+    community_link: https://github.com/knative/pkg
+    community_name: https://github.com/knative/pkg
+    community_url: https://github.com/knative/pkg
+    component_comment: ''
+    component_highlevel_description: Knative pkg provides a place for sharing common
+      Knative packages across the Knative repos.
+    component_name: Knative Common Packages
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 4FCED01
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/knative/pkg/archive/4fced0164c9a2ba173271a273662aa3e015d8073.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: No frequent releases.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1027562&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/knative/pkg
+    target_sw: linux
+    vendor: git
+    version: 4fced0164c9a2ba173271a273662aa3e015d8073
+    web_url: https://github.com/knative/pkg
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - MIT
+  name: pkg
+  primary:
+  - this
+  selected_licenses:
+  - Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4fced0164c9a2ba173271a273662aa3e015d8073
+  - 4fced0164c9a2ba173271a273662aa3e015d8073
+  mimer:
+    linking: Static
+    product_number: CTX1036619
+    product_version_label: 4FCED01
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''Knative Common Packages'': Manual set stako_decision_reason: ''allowed'' for
+    stako: ''ESW3'', team takes the risk!'
+  - '''1027562'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes-sigs/controller-runtime+0.12.2
+  additional_info:
+    fossa-attribution:
+      Description: Repo for the controller-runtime subproject of kubebuilder (sig-apimachinery)
+      Package: github.com/kubernetes-sigs/controller-runtime
+      Source: git
+      Version: 0.12.2
+      Hash: f5615964a1cd5830a3b90e597d918bf1355a2b00
+      licenses:
+      - Apache-2.0
+      Title: controller-runtime
+      DownloadURL: https://github.com/kubernetes-sigs/controller-runtime/archive/v0.12.2.zip
+  bazaar:
+    register: 'no'
+    prim: 28/CTX1027095
+    community_link: https://github.com/kubernetes-sigs/controller-runtime
+    community_name: https://github.com/kubernetes-sigs/controller-runtime
+    community_url: https://github.com/kubernetes-sigs/controller-runtime
+    component_comment: ''
+    component_highlevel_description: The Kubernetes controller-runtime Project is
+      a set of go libraries for building Controllers.
+    component_name: Kubernetes controller-runtime Project
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.12.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes-sigs/controller-runtime/archive/refs/tags/v0.12.2.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1028097&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes-sigs/controller-runtime
+    target_sw: linux
+    vendor: git
+    version: 0.12.2
+    web_url: https://github.com/kubernetes-sigs/controller-runtime
+  licenses:
+  - Apache-2.0
+  name: controller-runtime
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.12.2
+  - f5615964a1cd5830a3b90e597d918bf1355a2b00
+  mimer:
+    linking: Static
+    product_number: CTX1027095
+    product_version_label: v0.12.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''Kubernetes controller-runtime Project'': Manual set stako_decision_reason:
+    ''allowed'' for stako: ''ESW3'', team takes the risk!'
+  - '''1028097'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes-sigs/json+9f7c6b3444d2435b37c474910c55d371a1c769be
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/kubernetes-sigs/json
+      Source: git
+      Version: 9f7c6b3444d2435b37c474910c55d371a1c769be
+      Hash: 9f7c6b3444d2435b37c474910c55d371a1c769be
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: json
+      DownloadURL: https://github.com/kubernetes-sigs/json/archive/9f7c6b3444d2435b37c474910c55d371a1c769be.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1033840
+    community_link: https://github.com/kubernetes-sigs/json
+    community_name: https://github.com/kubernetes-sigs/json
+    community_url: https://github.com/kubernetes-sigs/json
+    component_comment: ''
+    component_highlevel_description: Golang JSON decoder supporting case-sensitive,
+      number-preserving, and strict decoding use cases
+    component_name: sigs.k8s.io/json
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 9F7C6B3
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes-sigs/json/archive/9f7c6b3444d2435b37c474910c55d371a1c769be.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: No frequent releases.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=996661&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes-sigs/json
+    target_sw: linux
+    vendor: git
+    version: 9f7c6b3444d2435b37c474910c55d371a1c769be
+    web_url: https://github.com/kubernetes-sigs/json
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: json
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 9f7c6b3444d2435b37c474910c55d371a1c769be
+  - 9f7c6b3444d2435b37c474910c55d371a1c769be
+  mimer:
+    linking: Static
+    product_number: CTX1033840
+    product_version_label: 9f7c6b3444d2435b37c474910c55d371a1c769be
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''996661'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''sigs.k8s.io/json'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+- ID: github.com/kubernetes-sigs/structured-merge-diff+4.2.1
+  additional_info:
+    fossa-attribution:
+      Description: Test cases and implementation for "server-side apply"
+      Package: github.com/kubernetes-sigs/structured-merge-diff
+      Source: git
+      Version: 4.2.1
+      Hash: 65611e5f7fc60e909529889c29faa9cac17cb485
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: structured-merge-diff
+      DownloadURL: https://github.com/kubernetes-sigs/structured-merge-diff/archive/v4.2.1.zip
+  bazaar:
+    register: 'no'
+    prim: 14/CTX1027900
+    community_link: https://github.com/kubernetes-sigs/structured-merge-diff
+    community_name: https://github.com/kubernetes-sigs/structured-merge-diff
+    community_url: https://github.com/kubernetes-sigs/structured-merge-diff
+    component_comment: ''
+    component_highlevel_description: Test cases and implementation for "server-side
+      apply".
+    component_name: Structured Merge and Diff
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 4.2.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes-sigs/structured-merge-diff/archive/v4.2.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1001866&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes-sigs/structured-merge-diff
+    target_sw: linux
+    vendor: git
+    version: 4.2.1
+    web_url: https://github.com/kubernetes-sigs/structured-merge-diff
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: structured-merge-diff
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.2.1
+  - 65611e5f7fc60e909529889c29faa9cac17cb485
+  mimer:
+    linking: Static
+    product_number: CTX1027900
+    product_version_label: v4.2.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1001866'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes-sigs/yaml+1.3.0
+  additional_info:
+    fossa-attribution:
+      Description: A better way to marshal and unmarshal YAML in Golang
+      Package: github.com/kubernetes-sigs/yaml
+      Source: git
+      Version: 1.3.0
+      Hash: 9535b3b1e2893fe44efb37c5c9f5665e245d786a
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - ISC
+      - MIT
+      Title: yaml
+      DownloadURL: https://github.com/kubernetes-sigs/yaml/archive/v1.3.0.zip
+  bazaar:
+    register: 'no'
+    prim: 6/CTX1025537
+    community_link: https://github.com/kubernetes-sigs/yaml
+    community_name: https://github.com/kubernetes-sigs/yaml
+    community_url: https://github.com/kubernetes-sigs/yaml
+    component_comment: ''
+    component_highlevel_description: A better way to marshal and unmarshal YAML in
+      Golang
+    component_name: yaml Kubernetes
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.3.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/kubernetes-sigs/yaml/archive/refs/tags/v1.3.0.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=989591&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: ''
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes-sigs/yaml
+    target_sw: linux
+    vendor: git
+    version: 1.3.0
+    web_url: https://github.com/kubernetes-sigs/yaml
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - ISC
+  - MIT
+  name: yaml
+  primary:
+  - this
+  selected_licenses:
+  - MIT
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.3.0
+  - 9535b3b1e2893fe44efb37c5c9f5665e245d786a
+  mimer:
+    linking: Static
+    product_number: CTX1025537
+    product_version_label: v1.3.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''989591'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''yaml Kubernetes'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+- ID: github.com/kubernetes/api+kubernetes-1.24.2
+  additional_info:
+    fossa-attribution:
+      Description: The canonical location of the Kubernetes API definition.
+      Package: github.com/kubernetes/api
+      Source: git
+      Version: kubernetes-1.24.2
+      Hash: 7e99a1ef2ccdd2589e9a41f5083a95c375ada0a2
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: api
+      DownloadURL: https://github.com/kubernetes/api/archive/kubernetes-1.24.2.zip
+  bazaar:
+    register: 'no'
+    prim: 147/CTX1021931
+    community_link: https://github.com/kubernetes/api
+    community_name: https://github.com/kubernetes/api
+    community_url: https://github.com/kubernetes/api
+    component_comment: ''
+    component_highlevel_description: Scheme, typing, encoding, decoding, and conversion
+      packages for Kubernetes and Kubernetes-like API objects.
+    component_name: Kubernetes API
+    component_platform: linux
+    component_programing_language: Go
+    component_version: KUBERNETES-1.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/api/archive/refs/tags/kubernetes-1.24.2.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1028100&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/api
+    target_sw: linux
+    vendor: git
+    version: kubernetes-1.24.2
+    web_url: https://github.com/kubernetes/api
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: api
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - kubernetes-1.24.2
+  - 7e99a1ef2ccdd2589e9a41f5083a95c375ada0a2
+  mimer:
+    linking: Static
+    product_number: CTX1021931
+    product_version_label: kubernetes-1.24.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''1028100'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''Kubernetes API'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+- ID: github.com/kubernetes/apiextensions-apiserver+0.24.2
+  additional_info:
+    fossa-attribution:
+      Description: API server for API extensions like CustomResourceDefinitions
+      Package: github.com/kubernetes/apiextensions-apiserver
+      Source: git
+      Version: 0.24.2
+      Hash: c1600f51be0d2f0c8af88b202a0dc2af4da553c5
+      licenses:
+      - Apache-2.0
+      Title: apiextensions-apiserver
+      DownloadURL: https://github.com/kubernetes/apiextensions-apiserver/archive/v0.24.2.zip
+  bazaar:
+    register: 'no'
+    prim: 54/CTX1022408
+    community_link: https://github.com/kubernetes/apiextensions-apiserver
+    community_name: https://github.com/kubernetes/apiextensions-apiserver
+    community_url: https://github.com/kubernetes/apiextensions-apiserver
+    component_comment: ''
+    component_highlevel_description: API server for API extensions like CustomResourceDefinitions.
+    component_name: apiextensions-apiserver
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/apiextensions-apiserver/archive/refs/tags/v0.24.2.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1021281&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Germany
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/apiextensions-apiserver
+    target_sw: linux
+    vendor: git
+    version: 0.24.2
+    web_url: https://github.com/kubernetes/apiextensions-apiserver
+  licenses:
+  - Apache-2.0
+  name: apiextensions-apiserver
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.24.2
+  - c1600f51be0d2f0c8af88b202a0dc2af4da553c5
+  mimer:
+    linking: Static
+    product_number: CTX1022408
+    product_version_label: 0.24.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1021281'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes/apimachinery+kubernetes-1.24.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/kubernetes/apimachinery
+      Source: git
+      Version: kubernetes-1.24.0
+      Hash: 97e5df2d0258ac077093867fabf508c1fc31f53b
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: apimachinery
+      DownloadURL: https://github.com/kubernetes/apimachinery/archive/kubernetes-1.24.0.zip
+  bazaar:
+    register: 'no'
+    prim: 200/CTX1021932
+    community_link: https://github.com/kubernetes/apimachinery
+    community_name: https://github.com/kubernetes/apimachinery
+    community_url: https://github.com/kubernetes/apimachinery
+    component_comment: ''
+    component_highlevel_description: Scheme, typing, encoding, decoding, and conversion
+      packages for Kubernetes and Kubernetes-like API objects.
+    component_name: Kubernetes apimachinery
+    component_platform: linux
+    component_programing_language: Go
+    component_version: KUBERNETES-1.24.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/apimachinery/archive/refs/tags/kubernetes-1.24.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1053201&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/apimachinery
+    target_sw: linux
+    vendor: git
+    version: kubernetes-1.24.0
+    web_url: https://github.com/kubernetes/apimachinery
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: apimachinery
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - kubernetes-1.24.0
+  - 97e5df2d0258ac077093867fabf508c1fc31f53b
+  mimer:
+    linking: Static
+    product_number: CTX1021932
+    product_version_label: kubernetes-1.24.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''1053201'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: github.com/kubernetes/client-go+kubernetes-1.24.2
+  additional_info:
+    fossa-attribution:
+      Description: Go client for Kubernetes.
+      Package: github.com/kubernetes/client-go
+      Source: git
+      Version: kubernetes-1.24.2
+      Hash: 7e9c304fe772f66465321e9275f15d05a7432001
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: client-go
+      DownloadURL: https://github.com/kubernetes/client-go/archive/kubernetes-1.24.2.zip
+  bazaar:
+    register: 'no'
+    prim: 151/CTX1021930
+    community_link: https://github.com/kubernetes/client-go
+    community_name: https://github.com/kubernetes/client-go
+    community_url: https://github.com/kubernetes/client-go
+    component_comment: ''
+    component_highlevel_description: Go clients for talking to a kubernetes cluster.
+    component_name: Kubernetes client-go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: KUBERNETES-1.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/client-go/archive/kubernetes-1.24.2.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1029922&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/client-go
+    target_sw: linux
+    vendor: git
+    version: kubernetes-1.24.2
+    web_url: https://github.com/kubernetes/client-go
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: client-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - kubernetes-1.24.2
+  - 7e9c304fe772f66465321e9275f15d05a7432001
+  mimer:
+    linking: Static
+    product_number: CTX1021930
+    product_version_label: kubernetes-1.24.2
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1029922'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes/component-base+kubernetes-1.24.2
+  additional_info:
+    fossa-attribution:
+      Description: Shared code for kubernetes core components
+      Package: github.com/kubernetes/component-base
+      Source: git
+      Version: kubernetes-1.24.2
+      Hash: a4e3913122f758be3006af409bbc8486ffb87c16
+      licenses:
+      - Apache-2.0
+      Title: component-base
+      DownloadURL: https://github.com/kubernetes/component-base/archive/kubernetes-1.24.2.zip
+  bazaar:
+    register: 'no'
+    prim: 53/CTX1028140
+    community_link: https://github.com/kubernetes/component-base
+    community_name: https://github.com/kubernetes/component-base
+    community_url: https://github.com/kubernetes/component-base
+    component_comment: ''
+    component_highlevel_description: Shared code for kubernetes core components.
+    component_name: component-base
+    component_platform: linux
+    component_programing_language: Go
+    component_version: KUBERNETES-1.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/component-base/archive/kubernetes-1.24.2.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1029924&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/component-base
+    target_sw: linux
+    vendor: git
+    version: kubernetes-1.24.2
+    web_url: https://github.com/kubernetes/component-base
+  licenses:
+  - Apache-2.0
+  name: component-base
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - kubernetes-1.24.2
+  - a4e3913122f758be3006af409bbc8486ffb87c16
+  mimer:
+    linking: Static
+    product_number: CTX1028140
+    product_version_label: kubernetes-1.24.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1029924'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/kubernetes/klog+2.60.1
+  additional_info:
+    fossa-attribution:
+      Description: Leveled execution logs for Go (fork of https://github.com/golang/glog)
+      Package: github.com/kubernetes/klog
+      Source: git
+      Version: 2.60.1
+      Hash: b46e95d6825a8558b8ca00afc4fbc26acfb5605a
+      licenses:
+      - Apache-2.0
+      Title: klog
+      DownloadURL: https://github.com/kubernetes/klog/archive/v2.60.1.zip
+  bazaar:
+    register: 'no'
+    prim: 23/CTX1026285
+    community_link: https://github.com/kubernetes/klog
+    community_name: https://github.com/kubernetes/klog
+    community_url: https://github.com/kubernetes/klog
+    component_comment: ''
+    component_highlevel_description: Leveled execution logs for Go (fork of https://github.com/golang/glog)
+    component_name: klog, Kubernetes
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.60.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/klog/archive/v2.60.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1005978&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/klog
+    target_sw: linux
+    vendor: git
+    version: 2.60.1
+    web_url: https://github.com/kubernetes/klog
+  licenses:
+  - Apache-2.0
+  name: klog
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.60.1
+  - b46e95d6825a8558b8ca00afc4fbc26acfb5605a
+  mimer:
+    linking: Static
+    product_number: CTX1026285
+    product_version_label: v2.60.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/kubernetes/kube-openapi+3ee0da9b0b4211c407396d9c233b38b77ce19773
+  additional_info:
+    fossa-attribution:
+      Description: Kubernetes OpenAPI spec generation & serving
+      Package: github.com/kubernetes/kube-openapi
+      Source: git
+      Version: 3ee0da9b0b4211c407396d9c233b38b77ce19773
+      Hash: 3ee0da9b0b4211c407396d9c233b38b77ce19773
+      licenses:
+      - Apache-2.0
+      Title: kube-openapi
+      DownloadURL: https://github.com/kubernetes/kube-openapi/archive/3ee0da9b0b4211c407396d9c233b38b77ce19773.zip
+  bazaar:
+    register: 'no'
+    prim: 32/CTX1025271
+    community_link: https://github.com/kubernetes/kube-openapi
+    community_name: https://github.com/kubernetes/kube-openapi
+    community_url: https://github.com/kubernetes/kube-openapi
+    component_comment: ''
+    component_highlevel_description: Kubernetes OpenAPI spec generation & serving.
+    component_name: kube-openapi
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 3EE0DA9
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/kube-openapi/archive/3ee0da9b0b4211c407396d9c233b38b77ce19773.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1014455&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/kube-openapi
+    target_sw: linux
+    vendor: git
+    version: 3ee0da9b0b4211c407396d9c233b38b77ce19773
+    web_url: https://github.com/kubernetes/kube-openapi
+  licenses:
+  - Apache-2.0
+  name: kube-openapi
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3ee0da9b0b4211c407396d9c233b38b77ce19773
+  - 3ee0da9b0b4211c407396d9c233b38b77ce19773
+  mimer:
+    linking: Static
+    product_number: CTX1025271
+    product_version_label: 3ee0da9b0b4211c407396d9c233b38b77ce19773
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/kubernetes/utils+3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+  additional_info:
+    fossa-attribution:
+      Description: Non-Kubernetes-specific utility libraries which are consumed by
+        multiple projects.
+      Package: github.com/kubernetes/utils
+      Source: git
+      Version: 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+      Hash: 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: utils
+      DownloadURL: https://github.com/kubernetes/utils/archive/3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3.zip
+  bazaar:
+    register: 'no'
+    prim: 33/CTX1025555
+    community_link: https://github.com/kubernetes/utils
+    community_name: https://github.com/kubernetes/utils
+    community_url: https://github.com/kubernetes/utils
+    component_comment: ''
+    component_highlevel_description: Non-Kubernetes-specific utility libraries which
+      are consumed by multiple projects.
+    component_name: utils, Kubernetes
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 3A6CE19
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/kubernetes/utils/archive/3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1001873&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/kubernetes/utils
+    target_sw: linux
+    vendor: git
+    version: 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+    web_url: https://github.com/kubernetes/utils
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: utils
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+  - 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+  mimer:
+    linking: Static
+    product_number: CTX1025555
+    product_version_label: 3a6ce19ff2f91f3dc49243f90f7834a0f1e4aaf3
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/lightstep/tracecontext.go+1757c391b1acf4147823503f13e003115ea4e5df
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/lightstep/tracecontext.go
+      Source: git
+      Version: 1757c391b1acf4147823503f13e003115ea4e5df
+      Hash: 1757c391b1acf4147823503f13e003115ea4e5df
+      licenses:
+      - MIT
+      Title: tracecontext.go
+      DownloadURL: https://github.com/lightstep/tracecontext.go/archive/1757c391b1acf4147823503f13e003115ea4e5df.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1036627
+    community_link: https://github.com/lightstep/tracecontext.go
+    community_name: https://github.com/lightstep/tracecontext.go
+    community_url: https://github.com/lightstep/tracecontext.go
+    component_comment: ''
+    component_highlevel_description: tracecontext.go
+    component_name: tracecontext.go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1757C39
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/lightstep/tracecontext.go/archive/1757c391b1acf4147823503f13e003115ea4e5df.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: No frequent releases. This version is older than 18 months.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1027498&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT REACHED EOS. CONTACT 3PPT.
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/lightstep/tracecontext.go
+    target_sw: linux
+    vendor: git
+    version: 1757c391b1acf4147823503f13e003115ea4e5df
+    web_url: https://github.com/lightstep/tracecontext.go
+  licenses:
+  - MIT
+  name: tracecontext.go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1757c391b1acf4147823503f13e003115ea4e5df
+  - 1757c391b1acf4147823503f13e003115ea4e5df
+  mimer:
+    linking: Static
+    product_number: CTX1036627
+    product_version_label: 1757C39
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/mailru/easyjson+0.7.7
+  additional_info:
+    fossa-attribution:
+      Description: Fast JSON serializer for golang.
+      Package: github.com/mailru/easyjson
+      Source: git
+      Version: 0.7.7
+      Hash: c120ca7ced6051261161ce15e8f1542a4b2567fc
+      licenses:
+      - BSD-3-Clause
+      - MIT
+      Title: easyjson
+      DownloadURL: https://github.com/mailru/easyjson/archive/v0.7.7.zip
+  bazaar:
+    register: 'no'
+    prim: 11/CTX1022548
+    community_link: https://github.com/mailru/easyjson
+    community_name: https://github.com/mailru/easyjson
+    community_url: https://github.com/mailru/easyjson
+    component_comment: ''
+    component_highlevel_description: Package easyjson provides a fast and easy way
+      to marshal/unmarshal Go structs to/from JSON without the use of reflection.
+      In performance tests, easyjson outperforms the standard encoding/json package
+      by a factor of 4-5x, and other JSON encoding packages by a factor of 2-3x.
+    component_name: easyjson
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.7.7
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/mailru/easyjson/archive/refs/tags/v0.7.7.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=967746&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Russian Federation
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/mailru/easyjson
+    target_sw: linux
+    vendor: git
+    version: 0.7.7
+    web_url: https://github.com/mailru/easyjson
+  licenses:
+  - BSD-3-Clause
+  - MIT
+  name: easyjson
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.7.7
+  - c120ca7ced6051261161ce15e8f1542a4b2567fc
+  mimer:
+    linking: Static
+    product_number: CTX1022548
+    product_version_label: v0.7.7
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''967746'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''easyjson'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/matttproud/golang_protobuf_extensions+1.0.2
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/matttproud/golang_protobuf_extensions
+      Source: git
+      Version: 1.0.2
+      Hash: c182affec369e30f25d3eb8cd8a478dee585ae7d
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: golang_protobuf_extensions
+      DownloadURL: https://github.com/matttproud/golang_protobuf_extensions/archive/v1.0.2.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1022623
+    community_link: https://github.com/matttproud/golang_protobuf_extensions
+    community_name: https://github.com/matttproud/golang_protobuf_extensions
+    community_url: https://github.com/matttproud/golang_protobuf_extensions
+    component_comment: ''
+    component_highlevel_description: This repository provides various Protocol Buffer
+      extensions for the Go language (golang), namely support for record length-delimited
+      message streaming.
+    component_name: golang_protobuf_extensions
+    component_platform: linux
+    component_programing_language: Go
+    component_version: C182AFF
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/matttproud/golang_protobuf_extensions/archive/c182affec369e30f25d3eb8cd8a478dee585ae7d.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=914489&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/matttproud/golang_protobuf_extensions
+    target_sw: linux
+    vendor: git
+    version: 1.0.2
+    web_url: https://github.com/matttproud/golang_protobuf_extensions
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: golang_protobuf_extensions
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.2
+  - c182affec369e30f25d3eb8cd8a478dee585ae7d
+  mimer:
+    linking: Static
+    product_number: CTX1022623
+    product_version_label: c182affec369e30f25d3eb8cd8a478dee585ae7d
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/modern-go/concurrent+1.0.3
+  additional_info:
+    fossa-attribution:
+      Description: concurrency utilities
+      Package: github.com/modern-go/concurrent
+      Source: git
+      Version: 1.0.3
+      Hash: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+      licenses:
+      - Apache-2.0
+      Title: concurrent
+      DownloadURL: https://github.com/modern-go/concurrent/archive/1.0.3.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1023640
+    community_link: https://github.com/modern-go/concurrent/
+    community_name: https://github.com/modern-go/concurrent/
+    community_url: https://github.com/modern-go/concurrent/
+    component_comment: ''
+    component_highlevel_description: concurrency utilities
+    component_name: concurrent, modern-go
+    component_platform: linux
+    component_programing_language: GO
+    component_version: 1.0.3
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/modern-go/concurrent/archive/1.0.3.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=905806&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: China
+    crypto: No Encryption
+    programming_language: GO
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/modern-go/concurrent
+    target_sw: linux
+    vendor: git
+    version: 1.0.3
+    web_url: https://github.com/modern-go/concurrent
+  licenses:
+  - Apache-2.0
+  name: concurrent
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.3
+  - bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+  mimer:
+    linking: Static
+    product_number: CTX1023640
+    product_version_label: 1.0.3
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/modern-go/reflect2+1.0.2
+  additional_info:
+    fossa-attribution:
+      Description: reflect api without runtime reflect.Value cost
+      Package: github.com/modern-go/reflect2
+      Source: git
+      Version: 1.0.2
+      Hash: 2b33151c9bbc5231aea69b8861c540102b087070
+      licenses:
+      - Apache-2.0
+      Title: reflect2
+      DownloadURL: https://github.com/modern-go/reflect2/archive/v1.0.2.zip
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1023637
+    community_link: https://github.com/modern-go/reflect2/
+    community_name: https://github.com/modern-go/reflect2/
+    community_url: https://github.com/modern-go/reflect2/
+    component_comment: ''
+    component_highlevel_description: reflect api that avoids runtime reflect.Value
+      cost
+    component_name: reflect2
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.0.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/modern-go/reflect2/archive/v1.0.2.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=989996&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/modern-go/reflect2
+    target_sw: linux
+    vendor: git
+    version: 1.0.2
+    web_url: https://github.com/modern-go/reflect2
+  licenses:
+  - Apache-2.0
+  name: reflect2
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.2
+  - 2b33151c9bbc5231aea69b8861c540102b087070
+  mimer:
+    linking: Static
+    product_number: CTX1023637
+    product_version_label: v1.0.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''989996'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''reflect2'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/munnerz/goautoneg+a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+  additional_info:
+    fossa-attribution:
+      Description: Mirror of bitbucket.org/ww/goautoneg
+      Package: github.com/munnerz/goautoneg
+      Source: git
+      Version: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+      Hash: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+      licenses:
+      - BSD-3-Clause
+      Title: goautoneg
+      DownloadURL: https://github.com/munnerz/goautoneg/archive/a7dc8b61c822528f973a5e4e7b272055c6fdb43e.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1023624
+    community_link: https://github.com/munnerz/goautoneg/
+    community_name: https://github.com/munnerz/goautoneg/
+    community_url: https://github.com/munnerz/goautoneg/
+    component_comment: ''
+    component_highlevel_description: HTTP Content-Type Autonegotiation.
+    component_name: goautoneg
+    component_platform: linux
+    component_programing_language: Go
+    component_version: A7DC8B6
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/munnerz/goautoneg/archive/a7dc8b61c822528f973a5e4e7b272055c6fdb43e.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: No frequent releases.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=947714&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/munnerz/goautoneg
+    target_sw: linux
+    vendor: git
+    version: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+    web_url: https://github.com/munnerz/goautoneg
+  licenses:
+  - BSD-3-Clause
+  name: goautoneg
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+  - a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+  mimer:
+    linking: Static
+    product_number: CTX1023624
+    product_version_label: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''947714'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''goautoneg'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/onsi/gomega+1.19.0
+  additional_info:
+    fossa-attribution:
+      Description: Ginkgo's Preferred Matcher Library
+      Package: github.com/onsi/gomega
+      Source: git
+      Version: 1.19.0
+      Hash: 3143ff4a92ce52253b4b256cc4c1e8f026c260d5
+      licenses:
+      - MIT
+      Title: gomega
+      DownloadURL: https://github.com/onsi/gomega/archive/v1.19.0.zip
+  bazaar:
+    register: 'no'
+    prim: 24/CTX1025265
+    community_link: https://github.com/onsi/gomega
+    community_name: https://github.com/onsi/gomega
+    community_url: https://github.com/onsi/gomega
+    component_comment: ''
+    component_highlevel_description: Gomega is a matcher/assertion library. It is
+      best paired with the Ginkgo BDD test framework, but can be adapted for use in
+      other contexts too.
+    component_name: Gomega
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.19.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/onsi/gomega/archive/refs/tags/v1.19.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1013359&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/onsi/gomega
+    target_sw: linux
+    vendor: git
+    version: 1.19.0
+    web_url: https://github.com/onsi/gomega
+  licenses:
+  - MIT
+  name: gomega
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.19.0
+  - 3143ff4a92ce52253b4b256cc4c1e8f026c260d5
+  mimer:
+    linking: Static
+    product_number: CTX1025265
+    product_version_label: v1.19.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR/SCAS component is not recommended to be used
+- ID: github.com/opentracing/opentracing-go+1.2.0
+  additional_info:
+    fossa-attribution:
+      Description: OpenTracing API for Go
+      Package: github.com/opentracing/opentracing-go
+      Source: git
+      Version: 1.2.0
+      Hash: d34af3eaa63c4d08ab54863a4bdd0daa45212e12
+      licenses:
+      - Apache-2.0
+      Title: opentracing-go
+      DownloadURL: https://github.com/opentracing/opentracing-go/archive/v1.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 4/CTX1021788
+    community_link: https://github.com/opentracing/opentracing-go
+    community_name: https://github.com/opentracing/opentracing-go
+    community_url: https://github.com/opentracing/opentracing-go
+    component_comment: ''
+    component_highlevel_description: This package is a Go platform API for OpenTracing.
+    component_name: OpenTracing API, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/opentracing/opentracing-go/archive/v1.2.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=956670&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/opentracing/opentracing-go
+    target_sw: linux
+    vendor: git
+    version: 1.2.0
+    web_url: https://github.com/opentracing/opentracing-go
+  licenses:
+  - Apache-2.0
+  name: opentracing-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.2.0
+  - d34af3eaa63c4d08ab54863a4bdd0daa45212e12
+  mimer:
+    linking: Static
+    product_number: CTX1021788
+    product_version_label: v1.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''956670'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''OpenTracing API, Go'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+- ID: github.com/pkg/errors+0.9.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/pkg/errors
+      Source: git
+      Version: 0.9.1
+      Hash: 614d223910a179a466c1767a985424175c39b465
+      licenses:
+      - BSD-2-Clause
+      Title: errors
+      DownloadURL: https://github.com/pkg/errors/archive/v0.9.1.zip
+  bazaar:
+    register: 'no'
+    prim: 10/CAX1059580
+    community_link: https://github.com/pkg/errors
+    community_name: https://github.com/pkg/errors
+    community_url: https://github.com/pkg/errors
+    component_comment: ''
+    component_highlevel_description: Package errors provides simple error handling
+      primitives.
+    component_name: errors, pkg
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.9.1
+    licenses:
+    - FAL1159003/1 (BSD 2-Clause "Simplified" License (BSD-2-Clause))
+    src_download_link: https://github.com/pkg/errors/archive/v0.9.1.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=928005&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Australia
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/pkg/errors
+    target_sw: linux
+    vendor: git
+    version: 0.9.1
+    web_url: https://github.com/pkg/errors.git
+  licenses:
+  - BSD-2-Clause
+  name: errors
+  primary:
+  - this
+  selected_licenses:
+  - BSD-2-Clause
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.9.1
+  - 614d223910a179a466c1767a985424175c39b465
+  mimer:
+    linking: Static
+    product_number: CAX1059580
+    product_version_label: v0.9.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-2-Clause
+  alerts:
+  - '''928005'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''errors, pkg'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/prometheus/client_golang+1.12.1
+  additional_info:
+    fossa-attribution:
+      Description: Prometheus instrumentation library for Go applications
+      Package: github.com/prometheus/client_golang
+      Source: git
+      Version: 1.12.1
+      Hash: 2e1c4818ccfdcf953ce399cadad615ff2bed968c
+      licenses:
+      - AML
+      - Apache-2.0
+      Title: client_golang
+      DownloadURL: https://github.com/prometheus/client_golang/archive/v1.12.1.zip
+  bazaar:
+    register: 'no'
+    prim: 33/CTX1022386
+    community_link: https://github.com/prometheus/client_golang
+    community_name: https://github.com/prometheus/client_golang
+    community_url: https://github.com/prometheus/client_golang
+    component_comment: ''
+    component_highlevel_description: This is the Go client library for Prometheus.
+      It has two separate parts, one for instrumenting application code, and one for
+      creating clients that talk to the Prometheus HTTP API.
+    component_name: Prometheus Go Client
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.12.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_golang/archive/v1.12.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1001778&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: Germany
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/prometheus/client_golang
+    target_sw: linux
+    vendor: git
+    version: 1.12.1
+    web_url: https://github.com/prometheus/client_golang
+  licenses:
+  - AML
+  - Apache-2.0
+  name: client_golang
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.12.1
+  - 2e1c4818ccfdcf953ce399cadad615ff2bed968c
+  mimer:
+    linking: Static
+    product_number: CTX1022386
+    product_version_label: v1.12.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/prometheus/client_model+0.2.0
+  additional_info:
+    fossa-attribution:
+      Description: Data model artifacts for Prometheus.
+      Package: github.com/prometheus/client_model
+      Source: git
+      Version: 0.2.0
+      Hash: 7bc5445566f0fe75b15de23e6b93886e982d7bf9
+      licenses:
+      - Apache-2.0
+      Title: client_model
+      DownloadURL: https://github.com/prometheus/client_model/archive/v0.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 9/CTX1022624
+    community_link: https://github.com/prometheus/client_model
+    community_name: https://github.com/prometheus/client_model
+    community_url: https://github.com/prometheus/client_model
+    component_comment: ''
+    component_highlevel_description: Data model artifacts for Prometheus.
+    component_name: client_model, Prometheus
+    component_platform: linux
+    component_programing_language: Makefile
+    component_version: 0.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_model/archive/v0.2.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=932392&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Makefile
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/prometheus/client_model
+    target_sw: linux
+    vendor: git
+    version: 0.2.0
+    web_url: https://github.com/prometheus/client_model
+  licenses:
+  - Apache-2.0
+  name: client_model
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.2.0
+  - 7bc5445566f0fe75b15de23e6b93886e982d7bf9
+  mimer:
+    linking: Static
+    product_number: CTX1022624
+    product_version_label: v0.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/prometheus/common+0.34.0
+  additional_info:
+    fossa-attribution:
+      Description: Go libraries shared across Prometheus components and libraries.
+      Package: github.com/prometheus/common
+      Source: git
+      Version: 0.34.0
+      Hash: 3763a1ded109d63be8a27824983c41413e056e1b
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: common
+      DownloadURL: https://github.com/prometheus/common/archive/v0.34.0.zip
+  bazaar:
+    register: 'no'
+    prim: 45/CTX1022337
+    community_link: https://github.com/prometheus/common
+    community_name: https://github.com/prometheus/common
+    community_url: https://github.com/prometheus/common
+    component_comment: ''
+    component_highlevel_description: Go libraries shared across Prometheus components
+      and libraries.
+    component_name: Common, Prometheus
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.34.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/common/archive/refs/tags/v0.34.0.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1011935&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Germany
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/prometheus/common
+    target_sw: linux
+    vendor: git
+    version: 0.34.0
+    web_url: https://github.com/prometheus/common
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: common
+  primary:
+  - this
+  selected_licenses:
+  - Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.34.0
+  - 3763a1ded109d63be8a27824983c41413e056e1b
+  mimer:
+    linking: Static
+    product_number: CTX1022337
+    product_version_label: v0.34.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - '''Common, Prometheus'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''1011935'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/prometheus/procfs+0.7.3
+  additional_info:
+    fossa-attribution:
+      Description: procfs provides functions to retrieve system, kernel and process
+        metrics from the pseudo-filesystem proc.
+      Package: github.com/prometheus/procfs
+      Source: git
+      Version: 0.7.3
+      Hash: f436cbb89ece38bf080d446b3ca27053b305eaac
+      licenses:
+      - Apache-2.0
+      Title: procfs
+      DownloadURL: https://github.com/prometheus/procfs/archive/v0.7.3.zip
+  bazaar:
+    register: 'no'
+    prim: 31/CTX1022327
+    community_link: https://github.com/prometheus/procfs
+    community_name: https://github.com/prometheus/procfs
+    community_url: https://github.com/prometheus/procfs
+    component_comment: ''
+    component_highlevel_description: procfs provides functions to retrieve system,
+      kernel and process metrics from the pseudo-filesystem proc.
+    component_name: procfs
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.7.3
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/procfs/archive/v0.7.3.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=989997&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/prometheus/procfs
+    target_sw: linux
+    vendor: git
+    version: 0.7.3
+    web_url: https://github.com/prometheus/procfs
+  licenses:
+  - Apache-2.0
+  name: procfs
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.7.3
+  - f436cbb89ece38bf080d446b3ca27053b305eaac
+  mimer:
+    linking: Static
+    product_number: CTX1022327
+    product_version_label: v0.7.3
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/PuerkitoBio/purell+1.1.1
+  additional_info:
+    fossa-attribution:
+      Description: tiny Go library to normalize URLs
+      Package: github.com/PuerkitoBio/purell
+      Source: git
+      Version: 1.1.1
+      Hash: 44968752391892e1b0d0b821ee79e9a85fa13049
+      licenses:
+      - BSD-3-Clause
+      Title: purell
+      DownloadURL: https://github.com/PuerkitoBio/purell/archive/v1.1.1.zip
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1022503
+    community_link: https://github.com/PuerkitoBio/purell
+    community_name: https://github.com/PuerkitoBio/purell
+    community_url: https://github.com/PuerkitoBio/purell
+    component_comment: ''
+    component_highlevel_description: Purell is a tiny Go library to normalize URLs.
+      It returns a pure URL. Pure-ell. Sanitizer and all.
+    component_name: purell
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.1.1
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/PuerkitoBio/purell/archive/v1.1.1.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=919878&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: Canada
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/PuerkitoBio/purell
+    target_sw: linux
+    vendor: git
+    version: 1.1.1
+    web_url: https://github.com/PuerkitoBio/purell
+  licenses:
+  - BSD-3-Clause
+  name: purell
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.1.1
+  - 44968752391892e1b0d0b821ee79e9a85fa13049
+  mimer:
+    linking: Static
+    product_number: CTX1022503
+    product_version_label: v1.1.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/PuerkitoBio/urlesc+de5bf2ad457846296e2031421a34e2568e304e35
+  additional_info:
+    fossa-attribution:
+      Description: Proper URL escaping as per RFC3986
+      Package: github.com/PuerkitoBio/urlesc
+      Source: git
+      Version: de5bf2ad457846296e2031421a34e2568e304e35
+      Hash: de5bf2ad457846296e2031421a34e2568e304e35
+      licenses:
+      - BSD-3-Clause
+      Title: urlesc
+      DownloadURL: https://github.com/PuerkitoBio/urlesc/archive/de5bf2ad457846296e2031421a34e2568e304e35.zip
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1022528
+    community_link: https://github.com/PuerkitoBio/urlesc
+    community_name: https://github.com/PuerkitoBio/urlesc
+    community_url: https://github.com/PuerkitoBio/urlesc
+    component_comment: ''
+    component_highlevel_description: 'Package urlesc implements query escaping as
+      per RFC 3986.
+
+      It contains some parts of the net/url package, modified so as to allow some
+      reserved characters incorrectly escaped by net/url (see issue 5684).'
+    component_name: urlesc
+    component_platform: linux
+    component_programing_language: Go
+    component_version: DE5BF2A
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/PuerkitoBio/urlesc/archive/de5bf2a.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=200226&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: Russian Federation
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/PuerkitoBio/urlesc
+    target_sw: linux
+    vendor: git
+    version: de5bf2ad457846296e2031421a34e2568e304e35
+    web_url: https://github.com/PuerkitoBio/urlesc
+  licenses:
+  - BSD-3-Clause
+  name: urlesc
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - de5bf2ad457846296e2031421a34e2568e304e35
+  - de5bf2ad457846296e2031421a34e2568e304e35
+  mimer:
+    linking: Static
+    product_number: CTX1022528
+    product_version_label: de5bf2ad457846296e2031421a34e2568e304e35
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/spf13/pflag+1.0.5
+  additional_info:
+    fossa-attribution:
+      Description: Drop-in replacement for Go's flag package, implementing POSIX/GNU-style
+        --flags.
+      Package: github.com/spf13/pflag
+      Source: git
+      Version: 1.0.5
+      Hash: 2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab
+      licenses:
+      - BSD-3-Clause
+      Title: pflag
+      DownloadURL: https://github.com/spf13/pflag/archive/v1.0.5.zip
+  bazaar:
+    register: 'no'
+    prim: 7/CAX1059886
+    community_link: https://github.com/spf13/pflag
+    community_name: https://github.com/spf13/pflag
+    community_url: https://github.com/spf13/pflag
+    component_comment: ''
+    component_highlevel_description: pflag is a drop-in replacement for Go's flag
+      package, implementing POSIX/GNU-style --flags.
+    component_name: pflag
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.0.5
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/spf13/pflag/archive/v1.0.5.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=919579&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/spf13/pflag
+    target_sw: linux
+    vendor: git
+    version: 1.0.5
+    web_url: https://github.com/spf13/pflag
+  licenses:
+  - BSD-3-Clause
+  name: pflag
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.5
+  - 2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab
+  mimer:
+    linking: Static
+    product_number: CAX1059886
+    product_version_label: v1.0.5
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - '''pflag'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''919579'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/stretchr/objx+0.2.0
+  additional_info:
+    fossa-attribution:
+      Description: Go package for dealing with maps, slices, JSON and other data.
+      Package: github.com/stretchr/objx
+      Source: git
+      Version: 0.2.0
+      Hash: ea4fe68685ee0d3cee7032121851b57e7494e8ea
+      licenses:
+      - BSD-3-Clause
+      - ISC
+      - MIT
+      Title: objx
+      DownloadURL: https://github.com/stretchr/objx/archive/v0.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1026078
+    community_link: https://github.com/stretchr/objx
+    community_name: https://github.com/stretchr/objx
+    community_url: https://github.com/stretchr/objx
+    component_comment: ''
+    component_highlevel_description: Go package for dealing with maps, slices, JSON
+      and other data.
+    component_name: Objx
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.2.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/stretchr/objx/archive/v0.2.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=919873&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/stretchr/objx
+    target_sw: linux
+    vendor: git
+    version: 0.2.0
+    web_url: https://github.com/stretchr/objx
+  licenses:
+  - BSD-3-Clause
+  - ISC
+  - MIT
+  name: objx
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.2.0
+  - ea4fe68685ee0d3cee7032121851b57e7494e8ea
+  mimer:
+    linking: Static
+    product_number: CTX1026078
+    product_version_label: v0.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/uber-go/atomic+1.9.0
+  additional_info:
+    fossa-attribution:
+      Description: Wrapper types for sync/atomic which enforce atomic access
+      Package: github.com/uber-go/atomic
+      Source: git
+      Version: 1.9.0
+      Hash: 3504dfaa1fa414923b1c8693f45d2f6931daf229
+      licenses:
+      - MIT
+      Title: atomic
+      DownloadURL: https://github.com/uber-go/atomic/archive/v1.9.0.zip
+  bazaar:
+    register: 'no'
+    prim: 12/CTX1023630
+    community_link: https://github.com/uber-go/atomic
+    community_name: https://github.com/uber-go/atomic
+    community_url: https://github.com/uber-go/atomic
+    component_comment: ''
+    component_highlevel_description: Simple wrappers for primitive types to enforce
+      atomic access.
+    component_name: atomic
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.9.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/uber-go/atomic/archive/refs/tags/v1.9.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=987764&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber-go/atomic
+    target_sw: linux
+    vendor: git
+    version: 1.9.0
+    web_url: https://github.com/uber-go/atomic
+  licenses:
+  - MIT
+  name: atomic
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.9.0
+  - 3504dfaa1fa414923b1c8693f45d2f6931daf229
+  mimer:
+    linking: Static
+    product_number: CTX1023630
+    product_version_label: v1.9.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''atomic'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - '''987764'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: github.com/uber-go/automaxprocs+1.4.0
+  additional_info:
+    fossa-attribution:
+      Description: Automatically set GOMAXPROCS to match Linux container CPU quota.
+      Package: github.com/uber-go/automaxprocs
+      Source: git
+      Version: 1.4.0
+      Hash: 1c8b231f48676bf2bbe1ec84e8b7551e65a2005e
+      licenses:
+      - MIT
+      Title: automaxprocs
+      DownloadURL: https://github.com/uber-go/automaxprocs/archive/v1.4.0.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1026727
+    community_link: https://github.com/uber-go/automaxprocs
+    community_name: https://github.com/uber-go/automaxprocs
+    community_url: https://github.com/uber-go/automaxprocs
+    component_comment: ''
+    component_highlevel_description: Automatically set GOMAXPROCS to match Linux container
+      CPU quota.
+    component_name: automaxprocs
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.4.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/uber-go/automaxprocs/archive/refs/tags/v1.4.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=984205&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber-go/automaxprocs
+    target_sw: linux
+    vendor: git
+    version: 1.4.0
+    web_url: https://github.com/uber-go/automaxprocs
+  licenses:
+  - MIT
+  name: automaxprocs
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.4.0
+  - 1c8b231f48676bf2bbe1ec84e8b7551e65a2005e
+  mimer:
+    linking: Static
+    product_number: CTX1026727
+    product_version_label: v1.4.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/uber-go/multierr+1.6.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/uber-go/multierr
+      Source: git
+      Version: 1.6.0
+      Hash: 3114a8b704d2d28dbacda34a872690aaef66aeed
+      licenses:
+      - MIT
+      Title: multierr
+      DownloadURL: https://github.com/uber-go/multierr/archive/v1.6.0.zip
+  bazaar:
+    register: 'no'
+    prim: 7/CTX1023631
+    community_link: https://github.com/uber-go/multierr
+    community_name: https://github.com/uber-go/multierr
+    community_url: https://github.com/uber-go/multierr
+    component_comment: ''
+    component_highlevel_description: multierr allows combining one or more Go errors
+      together.
+    component_name: multierr
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.6.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/uber-go/multierr/archive/v1.6.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=943100&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber-go/multierr
+    target_sw: linux
+    vendor: git
+    version: 1.6.0
+    web_url: https://github.com/uber-go/multierr
+  licenses:
+  - MIT
+  name: multierr
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.6.0
+  - 3114a8b704d2d28dbacda34a872690aaef66aeed
+  mimer:
+    linking: Static
+    product_number: CTX1023631
+    product_version_label: v1.6.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/uber-go/zap+1.19.1
+  additional_info:
+    fossa-attribution:
+      Description: Blazing fast, structured, leveled logging in Go.
+      Package: github.com/uber-go/zap
+      Source: git
+      Version: 1.19.1
+      Hash: eaeb0fc72fd23af7969c9a9f39e51b66827507ca
+      licenses:
+      - MIT
+      Title: zap
+      DownloadURL: https://github.com/uber-go/zap/archive/v1.19.1.zip
+  bazaar:
+    register: 'no'
+    prim: 13/CTX1023636
+    community_link: https://github.com/uber-go/zap
+    community_name: https://github.com/uber-go/zap
+    community_url: https://github.com/uber-go/zap
+    component_comment: ''
+    component_highlevel_description: Blazing fast, structured, leveled logging in
+      Go.
+    component_name: zap
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.19.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/uber-go/zap/archive/v1.19.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=984202&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber-go/zap
+    target_sw: linux
+    vendor: git
+    version: 1.19.1
+    web_url: https://github.com/uber-go/zap
+  licenses:
+  - MIT
+  name: zap
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.19.1
+  - eaeb0fc72fd23af7969c9a9f39e51b66827507ca
+  mimer:
+    linking: Static
+    product_number: CTX1023636
+    product_version_label: v1.19.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/uber/jaeger-client-go+2.25.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: github.com/uber/jaeger-client-go
+      Source: git
+      Version: 2.25.0
+      Hash: 121ee6fb26fd9617fc30d0d95569a39c30ca3b76
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: jaeger-client-go
+      DownloadURL: https://github.com/uber/jaeger-client-go/archive/v2.25.0.zip
+  bazaar:
+    register: 'no'
+    prim: 9/CTX1022800
+    community_link: https://github.com/uber/jaeger-client-go
+    community_name: https://github.com/uber/jaeger-client-go
+    community_url: https://github.com/uber/jaeger-client-go
+    component_comment: ''
+    component_highlevel_description: Instrumentation library that implements an OpenTracing
+      Tracer for Jaeger.
+    component_name: jaeger-client-go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.25.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/uber/jaeger-client-go/archive/v2.25.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=965783&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: N/A
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber/jaeger-client-go
+    target_sw: linux
+    vendor: git
+    version: 2.25.0
+    web_url: https://github.com/uber/jaeger-client-go
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: jaeger-client-go
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.25.0
+  - 121ee6fb26fd9617fc30d0d95569a39c30ca3b76
+  mimer:
+    linking: Static
+    product_number: CTX1022800
+    product_version_label: v2.25.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: github.com/uber/jaeger-lib+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: A collection of shared infrastructure libraries used by different
+        components of Jaeger.
+      Package: github.com/uber/jaeger-lib
+      Source: git
+      Version: 2.2.0
+      Hash: a87ae9d84fb038a8d79266298970720be7c80fcd
+      licenses:
+      - Apache-2.0
+      Title: jaeger-lib
+      DownloadURL: https://github.com/uber/jaeger-lib/archive/v2.2.0.zip
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1025491
+    community_link: https://github.com/uber/jaeger-lib
+    community_name: https://github.com/uber/jaeger-lib
+    community_url: https://github.com/uber/jaeger-lib
+    component_comment: ''
+    component_highlevel_description: A collection of shared infrastructure libraries
+      used by different components of Jaeger.
+    component_name: jaeger-lib
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/jaegertracing/jaeger-lib/archive/v2.2.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=919868&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: github.com/uber/jaeger-lib
+    target_sw: linux
+    vendor: git
+    version: 2.2.0
+    web_url: https://github.com/uber/jaeger-lib
+  licenses:
+  - Apache-2.0
+  name: jaeger-lib
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  - a87ae9d84fb038a8d79266298970720be7c80fcd
+  mimer:
+    linking: Static
+    product_number: CTX1025491
+    product_version_label: v2.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: go.googlesource.com/net+0.11.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/net
+      Source: git
+      Version: 0.11.0
+      Hash: 6c96ca5daff89298060438c3b5d24e1bd0900a52
+      licenses:
+      - BSD-2-Clause
+      - BSD-3-Clause
+      Title: net
+      DownloadURL: https://go.googlesource.com/net
+  bazaar:
+    register: 'no'
+    prim: 171/CAX1058653
+    community_link: https://github.com/golang/net
+    community_name: https://github.com/golang/net
+    community_url: https://github.com/golang/net
+    component_comment: ''
+    component_highlevel_description: Net Package - provides a portable interface for
+      network I/O, including TCP/IP, UDP, domain name resolution, and Unix domain
+      sockets. Context Package - defines the Context type, which carries deadlines,
+      cancelation signals, and other request-scoped values across API boundaries and
+      between processes.
+    component_name: Go Networking
+    component_platform: linux
+    component_programing_language: Go
+    component_version: V0.11.0
+    licenses: []
+    src_download_link: https://github.com/golang/net/archive/v0.11.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1049288&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/net
+    target_sw: linux
+    vendor: git
+    version: 0.11.0
+    web_url: https://go.googlesource.com/net
+  licenses:
+  - BSD-2-Clause
+  - BSD-3-Clause
+  name: net
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.11.0
+  - 6c96ca5daff89298060438c3b5d24e1bd0900a52
+  mimer:
+    linking: Static
+    product_number: CAX1058653
+    product_version_label: 0.11.0
+    selected_licenses:
+    - BSD-3-Clause
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1049288'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: go.googlesource.com/oauth2+0.4.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/oauth2
+      Source: git
+      Version: 0.4.0
+      Hash: 34ffb07a9918c019c2d5080521104d2598ed8266
+      licenses:
+      - BSD-3-Clause
+      Title: oauth2
+      DownloadURL: https://go.googlesource.com/oauth2
+  bazaar:
+    register: 'no'
+    prim: 57/CAX1057062
+    community_link: https://github.com/golang/oauth2
+    community_name: https://github.com/golang/oauth2
+    community_url: https://github.com/golang/oauth2
+    component_comment: ''
+    component_highlevel_description: Package oauth2 provides support for making OAuth2
+      authorized and authenticated HTTP requests. It can additionally grant authorization
+      with Bearer JWT
+    component_name: OAuth2, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: V0.4.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/oauth2/archive/v0.4.0.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1040427&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/oauth2
+    target_sw: linux
+    vendor: git
+    version: 0.4.0
+    web_url: https://go.googlesource.com/oauth2
+  licenses:
+  - BSD-3-Clause
+  name: oauth2
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.4.0
+  - 34ffb07a9918c019c2d5080521104d2598ed8266
+  mimer:
+    linking: Static
+    product_number: CAX1057062
+    product_version_label: 0.4.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''1040427'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: go.googlesource.com/protobuf+1.28.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/protobuf
+      Source: git
+      Version: 1.28.1
+      Hash: 6875c3d7242d1a3db910ce8a504f124cb840c23a
+      licenses:
+      - BSD-3-Clause
+      Title: protobuf
+      DownloadURL: https://go.googlesource.com/protobuf
+  bazaar:
+    register: 'no'
+    prim: 60/CAX1059823
+    community_link: https://go.googlesource.com/protobuf
+    community_name: https://go.googlesource.com/protobuf
+    community_url: https://go.googlesource.com/protobuf
+    component_comment: ''
+    component_highlevel_description: Go support for Google's protocol buffers
+    component_name: protobuf, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 1.28.1
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://go.googlesource.com/protobuf/+archive/refs/tags/v1.28.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1032295&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/protobuf
+    target_sw: linux
+    vendor: git
+    version: 1.28.1
+    web_url: https://go.googlesource.com/protobuf
+  licenses:
+  - BSD-3-Clause
+  name: protobuf
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.28.1
+  - 6875c3d7242d1a3db910ce8a504f124cb840c23a
+  mimer:
+    linking: Static
+    product_number: CAX1059823
+    product_version_label: 1.28.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+  - '''1032295'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: go.googlesource.com/sys+0.9.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/sys
+      Source: git
+      Version: 0.9.0
+      Hash: 55b11dcdae8194618ad245a452849aa95e461114
+      licenses:
+      - BSD-3-Clause
+      Title: sys
+      DownloadURL: https://go.googlesource.com/sys
+  bazaar:
+    register: 'no'
+    prim: 224/CAX1059635
+    community_link: https://github.com/golang/sys
+    community_name: https://github.com/golang/sys
+    community_url: https://github.com/golang/sys
+    component_comment: ''
+    component_highlevel_description: This repository holds supplemental Go packages
+      for low-level interactions with the operating system.
+    component_name: Sys, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.9.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/sys/archive/refs/tags/v0.9.0.zip
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1049290&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/sys
+    target_sw: linux
+    vendor: git
+    version: 0.9.0
+    web_url: https://go.googlesource.com/sys
+  licenses:
+  - BSD-3-Clause
+  name: sys
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.9.0
+  - 55b11dcdae8194618ad245a452849aa95e461114
+  mimer:
+    linking: Static
+    product_number: CAX1059635
+    product_version_label: 0.9.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: go.googlesource.com/term+0.9.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/term
+      Source: git
+      Version: 0.9.0
+      Hash: f6de4a13df88c8a1db88fc651737d7ff8b144a5f
+      licenses:
+      - BSD-3-Clause
+      Title: term
+      DownloadURL: https://go.googlesource.com/term
+  bazaar:
+    register: 'no'
+    prim: 21/CTX1030573
+    community_link: https://github.com/golang/term
+    community_name: https://github.com/golang/term
+    community_url: https://github.com/golang/term
+    component_comment: ''
+    component_highlevel_description: This repository provides Go terminal and console
+      support packages.
+    component_name: Go terminal/console support
+    component_platform: linux
+    component_programing_language: Go
+    component_version: v0.9.0
+    licenses: []
+    src_download_link: https://github.com/golang/term/archive/refs/tags/v0.9.0.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1049291&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/term
+    target_sw: linux
+    vendor: git
+    version: 0.9.0
+    web_url: https://go.googlesource.com/term
+  licenses:
+  - BSD-3-Clause
+  name: term
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.9.0
+  - f6de4a13df88c8a1db88fc651737d7ff8b144a5f
+  mimer:
+    linking: Static
+    product_number: CTX1030573
+    product_version_label: 0.9.0
+    selected_licenses:
+    - BSD-3-Clause
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR/SCAS component is not recommended to be used
+- ID: go.googlesource.com/text+0.10.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/text
+      Source: git
+      Version: 0.10.0
+      Hash: 3a7a2557e7386e7e39d8b31290c3e8962c39e0fc
+      licenses:
+      - BSD-3-Clause
+      Title: text
+      DownloadURL: https://go.googlesource.com/text
+  bazaar:
+    register: 'no'
+    prim: 37/CAX1059869
+    community_link: https://github.com/golang/text
+    community_name: https://github.com/golang/text
+    community_url: https://github.com/golang/text
+    component_comment: ''
+    component_highlevel_description: Text is the  repository that holds supplementary
+      Go libraries for text processing, many involving Unicode.
+    component_name: Text, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: V0.10.0
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/text/archive/v0.10.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1049292&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Switzerland
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/text
+    target_sw: linux
+    vendor: git
+    version: 0.10.0
+    web_url: https://go.googlesource.com/text
+  licenses:
+  - BSD-3-Clause
+  name: text
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.10.0
+  - 3a7a2557e7386e7e39d8b31290c3e8962c39e0fc
+  mimer:
+    linking: Static
+    product_number: CAX1059869
+    product_version_label: 0.10.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: go.googlesource.com/time+90d013bbcef8e15b6f78023a0e3b996267153e7d
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/time
+      Source: git
+      Version: 90d013bbcef8e15b6f78023a0e3b996267153e7d
+      Hash: 90d013bbcef8e15b6f78023a0e3b996267153e7d
+      licenses:
+      - BSD-3-Clause
+      Title: time
+      DownloadURL: https://go.googlesource.com/time
+  bazaar:
+    register: 'no'
+    prim: 17/CTX1023683
+    community_link: https://go.googlesource.com/time
+    community_name: https://go.googlesource.com/time
+    community_url: https://go.googlesource.com/time
+    component_comment: ''
+    component_highlevel_description: This repository provides supplementary Go time
+      packages.
+    component_name: Go Time
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 90D013B
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/time/archive/90d013bbcef8e15b6f78023a0e3b996267153e7d.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1001879&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/time
+    target_sw: linux
+    vendor: git
+    version: 90d013bbcef8e15b6f78023a0e3b996267153e7d
+    web_url: https://go.googlesource.com/time
+  licenses:
+  - BSD-3-Clause
+  name: time
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 90d013bbcef8e15b6f78023a0e3b996267153e7d
+  - 90d013bbcef8e15b6f78023a0e3b996267153e7d
+  mimer:
+    linking: Static
+    product_number: CTX1023683
+    product_version_label: 90d013bbcef8e15b6f78023a0e3b996267153e7d
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: go.googlesource.com/xerrors+2f41105eb62f341cfe208d06de4ee3bdd3a083da
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: go.googlesource.com/xerrors
+      Source: git
+      Version: 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+      Hash: 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+      licenses:
+      - BSD-3-Clause
+      Title: xerrors
+      DownloadURL: https://go.googlesource.com/xerrors
+  bazaar:
+    register: 'no'
+    prim: 7/CTX1027542
+    community_link: https://github.com/golang/xerrors
+    community_name: https://github.com/golang/xerrors
+    community_url: https://github.com/golang/xerrors
+    component_comment: ''
+    component_highlevel_description: This repository holds the transition packages
+      for the new Go 1.13 error values.
+    component_name: xerrors, Golang
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2F41105
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/golang/xerrors/archive/2f41105eb62f341cfe208d06de4ee3bdd3a083da.zip
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: No frequent releases.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1010035&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: 'NO'
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: go.googlesource.com/xerrors
+    target_sw: linux
+    vendor: git
+    version: 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+    web_url: https://go.googlesource.com/xerrors
+  licenses:
+  - BSD-3-Clause
+  name: xerrors
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+  - 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+  mimer:
+    linking: Static
+    product_number: CTX1027542
+    product_version_label: 2f41105eb62f341cfe208d06de4ee3bdd3a083da
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - '''xerrors, Golang'': Manual set stako_decision_reason: ''allowed'' for stako:
+    ''ESW3'', team takes the risk!'
+  - '''1010035'': Manual set stako_decision_reason: ''allowed'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: gopkg.in/inf.v0+0.9.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: gopkg.in/inf.v0
+      Source: git
+      Version: 0.9.1
+      Hash: d2d2541c53f18d2a059457998ce2876cc8e67cbf
+      licenses:
+      - BSD-3-Clause
+      Title: inf.v0
+      DownloadURL: https://gopkg.in/inf.v0
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1025279
+    community_link: https://gopkg.in/inf.v0
+    community_name: https://gopkg.in/inf.v0
+    community_url: https://gopkg.in/inf.v0
+    component_comment: ''
+    component_highlevel_description: 'Package inf (type inf.Dec) implements "infinite-precision"
+      decimal arithmetic. "Infinite precision" describes two characteristics: practically
+      unlimited precision for decimal number representation and no support for calculating
+      with any specific fixed precision.'
+    component_name: inf
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 0.9.1
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause (BSD-3-Clause))
+    src_download_link: https://github.com/go-inf/inf/archive/v0.9.1.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=910997&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: gopkg.in/inf.v0
+    target_sw: linux
+    vendor: git
+    version: 0.9.1
+    web_url: http://gopkg.in/inf.v0
+  licenses:
+  - BSD-3-Clause
+  name: inf.v0
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.9.1
+  - d2d2541c53f18d2a059457998ce2876cc8e67cbf
+  mimer:
+    linking: Static
+    product_number: CTX1025279
+    product_version_label: v0.9.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - BSD-3-Clause
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: gopkg.in/yaml.v2+2.4.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: gopkg.in/yaml.v2
+      Source: git
+      Version: 2.4.0
+      Hash: 7649d4548cb53a614db133b2a8ac1f31859dda8c
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: yaml.v2
+      DownloadURL: https://gopkg.in/yaml.v2
+  bazaar:
+    register: 'no'
+    prim: 17/CAX1059839
+    community_link: https://github.com/go-yaml/yaml
+    community_name: https://github.com/go-yaml/yaml
+    community_url: https://github.com/go-yaml/yaml
+    component_comment: ''
+    component_highlevel_description: YAML support for the Go language.
+    component_name: yaml, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 2.4.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/go-yaml/yaml/archive/v2.4.0.zip
+    stako_decision_reason: allowed
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=948127&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: gopkg.in/yaml.v2
+    target_sw: linux
+    vendor: git
+    version: 2.4.0
+    web_url: https://gopkg.in/yaml.v2
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: yaml.v2
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.4.0
+  - 7649d4548cb53a614db133b2a8ac1f31859dda8c
+  mimer:
+    linking: Static
+    product_number: CAX1059839
+    product_version_label: v2.4.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+  alerts:
+  - Stako is 'ESW4', BAZAAR component is not recommended to be used
+- ID: gopkg.in/yaml.v3+3.0.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: gopkg.in/yaml.v3
+      Source: git
+      Version: 3.0.1
+      Hash: f6f7691b1fdeb513f56608cd2c32c51f8194bf51
+      licenses:
+      - Apache-2.0
+      - MIT
+      Title: yaml.v3
+      DownloadURL: https://gopkg.in/yaml.v3
+  bazaar:
+    register: 'no'
+    prim: 27/CAX1059839
+    community_link: https://github.com/go-yaml/yaml
+    community_name: https://github.com/go-yaml/yaml
+    community_url: https://github.com/go-yaml/yaml
+    component_comment: ''
+    component_highlevel_description: YAML support for the Go language.
+    component_name: yaml, Go
+    component_platform: linux
+    component_programing_language: Go
+    component_version: 3.0.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/go-yaml/yaml/archive/v3.0.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1014454&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: Go
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: gopkg.in/yaml.v3
+    target_sw: linux
+    vendor: git
+    version: 3.0.1
+    web_url: https://gopkg.in/yaml.v3
+  licenses:
+  - Apache-2.0
+  - MIT
+  name: yaml.v3
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.0.1
+  - f6f7691b1fdeb513f56608cd2c32c51f8194bf51
+  mimer:
+    linking: Static
+    product_number: CAX1059839
+    product_version_label: v3.0.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+    selected_licenses:
+    - Apache-2.0
+- ID: seldon-core+1.17.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: seldon-core
+      Source: pip
+      Version: 1.17.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - GPL-1.0-or-later
+      - GPL-3.0-only
+      - GPL-3.0-or-later
+      - GPL-3.0-with-GCC-exception
+      - ISC
+      - MIT
+      - MPL-2.0
+      - NCSA
+      - Python-2.0
+      - bsd-3-clause-open-mpi
+      - flora-1.1
+      Title: seldon-core
+      DownloadURL: https://files.pythonhosted.org/packages/fe/8b/486773eae1baf4e55f5a70a386dfcbea824116553645199383bbc535124a/seldon-core-1.17.1.tar.gz
+  bazaar:
+    register: 'no'
+    prim: 17/CTX1023825
+    community_link: https://github.com/SeldonIO/seldon-core
+    community_name: https://github.com/SeldonIO/seldon-core
+    community_url: https://github.com/SeldonIO/seldon-core
+    component_comment: ''
+    component_highlevel_description: An MLOps framework to package, deploy, monitor
+      and manage thousands of production machine learning models
+    component_name: Seldon Core
+    component_platform: linux
+    component_programing_language: HTML
+    component_version: V1.17.1
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/SeldonIO/seldon-core/archive/v1.17.1.tar.gz
+    stako_decision_reason: allowed
+    stako: ESW3
+    stako_comment: Copyleft license found.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1059030&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United Kingdom
+    crypto: No Encryption
+    programming_language: HTML
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: seldon-core
+    target_sw: linux
+    vendor: pip
+    version: 1.17.1
+    web_url: https://github.com/SeldonIO/seldon-core
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - GPL-1.0-or-later
+  - GPL-3.0-only
+  - GPL-3.0-or-later
+  - GPL-3.0-with-GCC-exception
+  - ISC
+  - MIT
+  - MPL-2.0
+  - NCSA
+  - Python-2.0
+  - bsd-3-clause-open-mpi
+  - flora-1.1
+  name: seldon-core
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.17.1
+  mimer:
+    linking: Static
+    product_number: CTX1023825
+    product_version_label: 1.17.1
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+  alerts:
+  - Stako is 'ESW3', BAZAAR/SCAS component is not recommended to be used
